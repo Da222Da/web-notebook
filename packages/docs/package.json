@@ -1,0 +1,19 @@
+{
+  "name": "godot-docs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vitepress dev ",
+    "build": "vitepress build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "vitepress": "^1.0.0-rc.25"
+  },
+  "dependencies": {
+    "element-plus": "^2.4.2"
+  }
+}
