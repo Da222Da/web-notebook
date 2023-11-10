@@ -4,6 +4,7 @@ import sidebar from "./sidebar/index.mjs";
 export default defineConfig({
   title: "基于 JS 的 Web 应用开发",
   description: "基于 JavaScript 的 Web 应用开发。",
+  base: "/godot/",
   srcDir: "src",
   head: [["link", { rel: "stylesheet", href: "" }]],
   themeConfig: {
