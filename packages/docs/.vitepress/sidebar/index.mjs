@@ -4,26 +4,18 @@ import node from "./node.mjs";
 const home = {
   items: [
     {
-      text: "JS 基础知识",
+      text: "基础知识",
       collapsed: false,
       items: [
         {
-          text: "ES 语法标准",
-          base: "/es/",
-          link: "index",
-        },
-        {
-          text: "运行时环境",
+          text: "ECMAScript 语法标准",
           items: [
             {
-              text: "浏览器(Browser)",
-            },
-            {
-              text: "NodeJS",
-              base: "/node/",
+              text: "ES 官方标准",
+              base: "/es/",
               link: "index",
-            },
-          ],
+            }
+          ]
         },
         {
           text: "工程化",
@@ -32,11 +24,26 @@ const home = {
       ],
     },
     {
-      text: "网页开发",
+      text: "运行时环境",
+      collapsed: false,
+      items: [
+        {
+          text: "浏览器(Browser)",
+        },
+        {
+          text: "服务端(NodeJS)",
+          base: "/node/",
+          link: "index",
+        },
+      ],
+    },
+    {
+      text: "应用开发",
       collapsed: false,
     },
   ],
 };
+
 export default {
   "/": home,
   "/es/": es,

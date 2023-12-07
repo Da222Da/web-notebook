@@ -7,9 +7,6 @@ export default {
       link: "index",
       items: [
         {
-          text: "基本用法",
-        },
-        {
           text: "包管理工具 npm",
           items: [
             {

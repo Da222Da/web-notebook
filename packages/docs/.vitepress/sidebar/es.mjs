@@ -1,9 +1,9 @@
 export default {
-  text: "ES 语法标准",
+  text: "ECMASript 语法标准",
   base: "/es/",
   items: [
     {
-      text: "ECMASript 语法标准",
+      text: "ES 官方标准",
       link: "index",
       items: [
         {
