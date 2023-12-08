@@ -11,12 +11,11 @@ export default defineConfig({
     sidebar: sidebar(),
     nav: nav(),
     socialLinks: [{ icon: "github", link: "https://github.com/Da222Da/web" }],
-    search: {
-      provider: "local",
-    },
+    // search: {
+    //   provider: "local",
+    // },
   },
 });
-// test
 function sidebar() {
   let obj = {};
   const data = sidebarData;
