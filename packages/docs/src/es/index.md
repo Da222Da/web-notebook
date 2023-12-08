@@ -1,6 +1,6 @@
-# ECMAScript 语法标准
+# 简介 
 
-ECMAScript 是 JavaScript 脚本语言的语法标准。
+ECMAScript 是 JavaScript 脚本语言的语法标准，由 W3C 国际组织定义。
 
 接下来，我们将从两个方面来学习 ECMAScript 语法标准：
 
