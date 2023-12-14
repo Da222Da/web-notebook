@@ -1,5 +1,5 @@
 <script setup>
-import icon from "./documate.vue";
+// import icon from "./documate.vue";
 </script>
 
 <template>

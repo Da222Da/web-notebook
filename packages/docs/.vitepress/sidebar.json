@@ -20,7 +20,10 @@
               }
             ]
           },
-          { "text": "组件化" },
+          {
+            "text": "组件化",
+            "link": "/componentization.md"
+          },
           { "text": "工程化" }
         ]
       },
