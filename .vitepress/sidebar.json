@@ -35,8 +35,7 @@
             "items": [
               {
                 "text": "NodeJS",
-                "base": "/node/",
-                "link": "index"
+                "link": "/node/index.md"
               }
             ]
           }
@@ -44,30 +43,11 @@
       },
       {
         "text": "应用开发",
-        "collapsed": false
-      }
-    ]
-  },
-  "node": {
-    "text": "NodeJS",
-    "base": "/node/",
-    "items": [
-      {
-        "text": "NodeJS 是什么？",
-        "link": "index",
+        "collapsed": false,
         "items": [
           {
-            "text": "包管理工具 npm",
-            "items": [
-              {
-                "text": "npm 是什么？",
-                "link": "npm"
-              },
-              {
-                "text": "工作区(workspace)",
-                "link": "workspace"
-              }
-            ]
+            "text": "StaticSite 静态网站",
+            "link": "/apps/static-site.md"
           }
         ]
       }

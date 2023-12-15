@@ -1,4 +1,6 @@
-# Storybook: 开发 UI 组件文档
+<PageHeader content="Storybook: 开发 UI 组件文档" />
+
+## 简介
 
 `storybook.js` 是一个用于开发 UI 组件文档的开源工具，它提供了一个独立的环境，让开发者可以在其中浏览、交互和开发组件。使用 Storybook.js 可以帮助开发者快速、高效地开发、测试和展示 UI 组件，同时也方便团队成员之间的协作和沟通。
 

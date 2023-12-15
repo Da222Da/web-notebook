@@ -1,4 +1,6 @@
-# 工作区 workspaces
+<PageHeader content="工作区 workspaces" />
+
+## 什么是工作区 workspaces？
 
 如果你想构建 `Monorepo 项目`的话，建议你使用 npm 提供的多包管理功能`工作区 workspaces`。
 

@@ -1,4 +1,6 @@
-# npm 是什么？
+<PageHeader content="NPM 的安装与使用" />
+
+## npm 是什么？
 
 NPM 是 Node.js 官方提供的包管理工具（Package Manager），用于管理 Node.js 模块。
 
@@ -10,4 +12,7 @@ NPM 是 Node.js 官方提供的包管理工具（Package Manager），用于管�
 
 ```sh
 npm -v
+
+npm install jquery -S
+npm uninstall jquery
 ```
