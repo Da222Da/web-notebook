@@ -1,0 +1,31 @@
+<div id="app"></div>
+<script>
+  let data = {
+    name: "张三",
+  };
+  const render = () => {
+    document.getElementById("app").innerHTML = data.name;
+  };
+  const init = () => {
+    render();
+  };
+
+  // 数据代理
+  const proxy = new Proxy(data, {
+    get(target, key) {
+      return target[key];
+    },
+    set(target, key, value) {
+      target[key] = value;
+      render();
+    },
+  });
+
+  // 初始化
+  init();
+
+  // 在 1s 之后，改变数据 data.name，并触发代理对象 proxy 的 set 方法，自动更新视图
+  setTimeout(() => {
+    proxy.name = "李四";
+  }, 1000);
+</script>

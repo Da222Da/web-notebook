@@ -4,5 +4,4 @@
 
 在开发过程中，为了更加高效地使用组件化来编写用户界面。我们可以借助一些现成的框架：
 
-- 组件化实现方案：`React.js`、`Vue.jS`
-- 组件化文档说明：[Storybook.js](/packages/storybook.md)
+- 组件化实现方案：[Vue.js](../packages/vuejs/index.md)、`React.js`

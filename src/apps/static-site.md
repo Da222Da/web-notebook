@@ -14,5 +14,7 @@
 - [如何注册全局组件?](https://vitepress.dev/guide/extending-default-theme#registering-global-components)
 - [如何在网页的特定位置插入内容?](https://vitepress.dev/guide/extending-default-theme#layout-slots)
 - [如何部署到 GitHub Pages？](https://vitepress.dev/guide/deploy#github-pages)
+- [如何控制侧边栏目录导航的层级深度?](https://vitepress.dev/reference/default-theme-config#outline)
+- [如何对代码块进行分组？](https://vitepress.dev/guide/markdown#code-groups)
 
 :::
