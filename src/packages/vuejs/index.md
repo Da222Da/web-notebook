@@ -170,6 +170,10 @@ function handleMyEvevt(msg) {
 
 :::
 
+### `待处理` - 计算属性 computed
+
+### `待处理` - 模板引用 ref attribute
+
 ## 应用场景
 
 ## 原理探索

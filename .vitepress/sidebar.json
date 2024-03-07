@@ -7,7 +7,7 @@
         "items": [
           {
             "text": "ECMAScript 语法标准",
-            "link": "/base/es.md"
+            "link": "/base/es/index.md"
           },
           {
             "text": "组件化",
