@@ -1,0 +1,12 @@
+{
+  "name": "reactivity",
+  "version": "1.0.0",
+  "description": "响应式包",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
