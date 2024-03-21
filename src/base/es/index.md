@@ -11,7 +11,6 @@ ECMAScript 是 JavaScript 脚本语言的语法标准，由 W3C 国际组织定�
    - 面向对象编程
    - 异步编程(Promise、async/await)
    - 迭代器、生成器 Generator
-   - 代理 Proxy、反射 Reflect
-3. 衍生工具: [JS 编译器(Babel)](/packages/babel.md)、[JS 类型检查工具(TypeScript)](/packages/ts/)
+   - [代理 Proxy 与反射 Reflect](./proxy-and-reflect.md)
 
 :::

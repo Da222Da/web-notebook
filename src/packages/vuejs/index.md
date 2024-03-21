@@ -1,12 +1,31 @@
 <PageHeader content="Vue.js: JS 组件化框架" />
 
-## 简介
+## #简介
 
-VueJS 是一个用于构建用户界面的 JavaScript 框架。
+VueJS 是一个基于 JavaScript 的框架、用于构建**组件化**的用户界面。
 
 如果想要查看更多信息的话，请移步 [Vue.js 官网@3](https://cn.vuejs.org/)。
 
-## 基本使用
+::: warning # 什么是组件化？
+
+组件化就是将复杂的界面分解为可重用、可维护的小部件，每个组件都有自己的视图和逻辑，这样可以提高开发效率，简化复杂应用的开发过程。
+
+:::
+
+## #基本使用
+
+::: tip
+
+- [如何配置 Vue 开发环境？](./usage/config-dev-env.md)
+- 如何创建一个 Vue 应用？
+- [模板语法 && 指令](./usage/template-syntax.md)
+- **响应系统：**
+- **组件：**
+  - [单文件组件 SFC](./usage/sfc.md)
+
+:::
+
+###
 
 ### setup() 入口函数
 
@@ -174,9 +193,9 @@ function handleMyEvevt(msg) {
 
 ### `待处理` - 模板引用 ref attribute
 
-## 应用场景
+## #应用场景
 
-## 原理探索
+## #原理探索
 
 ### 1.为什么需要响应式？
 
