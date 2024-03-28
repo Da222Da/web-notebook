@@ -8,9 +8,11 @@ Typescript 是 ECMAScript 语法标准的另外一种实现，它向下兼容了
 
 ::: danger 快速上手指南：
 
-1. 类型系统: [接口](/packages/ts/type-system#什么是接口)、[泛型](/packages/ts/type-system#什么是泛型)
+1. 语法约定：[数据类型](./grammar/data-type.md)
+
+<!-- 1. 类型系统: [接口](/packages/ts/type-system#什么是接口)、[泛型](/packages/ts/type-system#什么是泛型)
 2. 新增语法：
-   - 运算符：[空值合并 ??](/packages/ts/grammar.md#空值合并)
+   - 运算符：[空值合并 ??](/packages/ts/grammar.md#空值合并) -->
 
 :::
 
