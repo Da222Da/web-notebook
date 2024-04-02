@@ -2,7 +2,7 @@
   "home": {
     "items": [
       {
-        "text": "基础知识",
+        "text": "JS 基础知识",
         "collapsed": false,
         "items": [
           {
@@ -35,8 +35,8 @@
         "collapsed": false,
         "items": [
           {
-            "text": "StaticSite 静态网站",
-            "link": "/apps/static-site.md"
+            "text": "网页开发",
+            "link": "/apps/webpage/index.md"
           }
         ]
       }
