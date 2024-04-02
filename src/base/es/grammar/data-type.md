@@ -152,70 +152,6 @@ const { name, age, city } = person;
 const { name: personName, age: personAge } = person; // 使用别名进行对象解构
 ```
 
-::: danger 深入对象属性
-
-对象属性的类型可以分为两种：`数据属性`和`访问器属性`。
-
-- 数据属性`Data Properties`:
-  - 数据属性包含一个存储值的位置。这个值可以是任何 JavaScript 数据类型，如字符串、数字、布尔值等。
-  - 数据属性具有四个特性： `[[Value]]` （存储属性值）、 `[[Writable]]` （属性是否可写）、 `[[Enumerable]]` （属性是否可枚举）和 `[[Configurable]]` （属性是否可配置）。
-  - 默认情况下，数据属性的 `[[Writable]]` 、 `[[Enumerable]]` 和 `[[Configurable]]` 特性都为 true， `[[Value]]` 默认值为 undefined。
-- 访问器属性`Accessor Properties`:
-  - 访问器属性不包含一个值，而是包含一对 getter 和 setter 函数，用于获取和设置属性的值。
-  - 访问器属性具有四个特性： `[[Get]]` （获取属性值的函数）和 `[[Set]]` （设置属性值的函数）、 `[[Enumerable]]` （属性是否可枚举）和 `[[Configurable]]` （属性是否可配置）。
-  - 访问器属性没有 `[[Value]]` 和 `[[Writable]]` 特性，因为它们不直接存储属性值。
-
-```js
-// 定义一个空对象
-const person = {};
-
-// 定义数据属性
-Object.defineProperty(person, "name", {
-  value: "Alice", // 属性值为 'Alice'
-  writable: true, // 属性可写
-  enumerable: true, // 属性可枚举
-  configurable: true, // 属性可配置
-});
-
-// 定义访问器属性
-let _age = 30; // 私有变量，用于存储年龄
-
-Object.defineProperty(person, "age", {
-  get: function () {
-    return _age; // 获取年龄值
-  },
-  set: function (newAge) {
-    if (newAge >= 0 && newAge <= 120) {
-      _age = newAge; // 设置年龄值，限制在0到120之间
-    } else {
-      console.log("Invalid age value");
-    }
-  },
-  enumerable: true, // 属性可枚举
-  configurable: true, // 属性可配置
-});
-
-// 访问数据属性
-console.log(person.name); // 输出 'Alice'
-
-// 使用访问器属性
-console.log(person.age); // 输出 30
-person.age = 35; // 设置年龄为35
-console.log(person.age); // 输出 35
-person.age = -5; // 尝试设置无效年龄值，将输出 'Invalid age value'
-console.log(person.age); // 输出 35，年龄未改变
-```
-
-:::
-
-::: warning 特别说明: 什么是内部特性？
-
-ECMA-262 使用一些内部特性来描述属性的特征。这些特性是由为 JavaScript 实现引擎的规范定义
-的。因此，开发者不能在 JavaScript 中直接访问这些特性。为了将某个特性标识为内部特性，规范会用
-两个中括号把特性的名称括起来，比如`[[Enumerable]]`。
-
-:::
-
 ## Array 数组
 
 Array 是 JavaScript 中的一种数据类型，通过`有序集合`的形式，将任意类型的数据组织到一起。
@@ -239,4 +175,124 @@ console.log(numbers); // 输出: [1, 10, 3, 4, 5, 6]
 // 删除元素
 numbers.splice(2, 1);
 console.log(numbers); // 输出: [1, 10, 4, 5, 6]
+```
+
+## Map 映射
+
+Map 是 JavaScript 中的一种数据类型，通过`键值对`的形式，将任意类型的数据组织到一起。
+
+```js
+// 创建一个新的Map对象
+let myMap = new Map();
+WeakMap;
+
+// 向Map中添加键值对
+myMap.set("key1", "value1");
+myMap.set("key2", "value2");
+
+// 访问Map中的值
+console.log(myMap.get("key1")); // 输出: value1
+console.log(myMap.get("key2")); // 输出: value2
+
+// 检查Map中是否存在特定键
+console.log(myMap.has("key1")); // 输出: true
+
+// 遍历Map中的所有键值对
+myMap.forEach((value, key) => {
+  console.log(`${key}: ${value}`);
+});
+
+// 删除特定键值对
+myMap.delete("key1");
+
+// 清空Map
+myMap.clear();
+```
+
+## WeakMap 弱映射
+
+在 JavaScript 中，WeakMap 是一种特殊类型的 Map，其中键只能是对象。与普通的 Map 不同，WeakMap 中的键是弱引用，这意味着如果没有其他引用指向键对象，则该键可能会被垃圾回收。WeakMap 通常用于存储私有数据或缓存数据，因为键对象被垃圾回收时，与之关联的数据也会被自动清除。
+
+```js
+// 创建一个新的 WeakMap 对象
+let myWeakMap = new WeakMap();
+
+// 创建一个对象作为键
+let key = {};
+let key2 = {};
+
+// 向 WeakMap 中添加键值对
+myWeakMap.set(key, "value1");
+myWeakMap.set(key2, "value2");
+
+// 访问 WeakMap 中的值
+console.log(myWeakMap.get(key)); // 输出: value1
+console.log(myWeakMap.get(key2)); // 输出: value2
+
+// 检查 WeakMap 中是否存在特定键
+console.log(myWeakMap.has(key)); // 输出: true
+
+// 删除特定键值对
+myWeakMap.delete(key);
+
+// 注意：由于键是弱引用，如果没有其他引用指向 key2，key2 和与之关联的值可能会被垃圾回收
+```
+
+## Set 集合
+
+在 JavaScript 中，Set 是一种数据结构，它允许您存储唯一值，无论是原始值还是引用值。Set 中的值是唯一的，重复值将被忽略。Set 提供了一种方便的方式来存储一组唯一的值，而不需要自己手动去除重复项。
+
+以下是一个简单的代码示例，演示如何创建一个 Set，向其中添加值，以及如何访问 Set 中的值：
+
+```js
+// 创建一个新的Set对象
+let mySet = new Set();
+
+// 向Set中添加值
+mySet.add(1);
+mySet.add(2);
+mySet.add(3);
+mySet.add(1); // 重复值将被忽略
+
+// 检查Set中是否存在特定值
+console.log(mySet.has(1)); // 输出: true
+
+// 获取Set的大小（包含唯一值的数量）
+console.log(mySet.size); // 输出: 3
+
+// 删除特定值
+mySet.delete(2);
+
+// 遍历Set中的所有值
+mySet.forEach((value) => {
+  console.log(value);
+});
+
+// 清空Set
+mySet.clear();
+```
+
+## WeakSet 弱集合
+
+在 JavaScript 中，WeakSet 是一种特殊类型的 Set，它只能存储对象，并且这些对象是弱引用的。与普通的 Set 不同，WeakSet 中的对象是弱引用，这意味着如果没有其他引用指向对象，则对象可能会被垃圾回收。WeakSet 通常用于存储一组对象，而不需要担心内存泄漏。
+
+```js
+// 创建一个新的WeakSet对象
+let myWeakSet = new WeakSet();
+
+// 创建一些对象
+let obj1 = {};
+let obj2 = {};
+
+// 向WeakSet中添加对象
+myWeakSet.add(obj1);
+myWeakSet.add(obj2);
+
+// 检查WeakSet中是否存在特定对象
+console.log(myWeakSet.has(obj1)); // 输出: true
+
+// 删除特定对象
+myWeakSet.delete(obj2);
+
+// 注意：由于对象是弱引用，如果没有其他引用指向obj1，obj1可能会被垃圾回收
 ```

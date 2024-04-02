@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+
+  <!-- 
+    目标：
+     1. 解决硬编码的问题: 副作用函数只能叫 effect() -> 使用一个匿名的副作用函数。
+     2. 为代理对象的属性与其对应的副作用函数建立关联。
+   -->
+  <script>
+    // 副作用函数
+    // 存储副作用函数的集合
+    const bucket = new WeakMap();
+    let activeEffect = null; // 用一个全局变量存储被注册的副作用函数
+    // 注册副作用函数
+    const registerEffect = (fn) => {
+      activeEffect = fn;
+      fn();
+    };
+
+    // 原始数据
+    var data = { text: "Hello World" };
+
+    // 数据代理
+    let obj = new Proxy(data, {
+      get(target, key) {
+        track(target, key);
+        return target[key];
+      },
+      set(target, key, newVal) {
+        target[key] = newVal;
+        trigger(target, key);
+        return true;
+      },
+    });
+
+    // 追踪属性的变化
+    function track(target, key) {
+      if (activeEffect) {
+        let depsMap = bucket.get(target);
+        if (!depsMap) {
+          bucket.set(target, (depsMap = new Map()));
+        }
+
+        // 获取 key 属性对应的副作用函数
+        let deps = depsMap.get(key);
+        if (!deps) {
+          depsMap.set(key, (deps = new Set()));
+        }
+        deps.add(activeEffect);
+      }
+    }
+
+    // 拦截属性的变化，并做出反应
+    function trigger(target, key) {
+      const depsMap = bucket.get(target);
+      if (depsMap) {
+        const effects = depsMap.get(key);
+        effects &&
+          effects.forEach((fn) => {
+            fn();
+          });
+      }
+    }
+
+    // 副作用函数
+    registerEffect(() => {
+      console.log("registerEffect run");
+      document.body.innerText = obj.text;
+    });
+
+    // 修改数据
+    setTimeout(() => {
+      // obj.notExist = "hello vue3";
+      obj.text = "Hello Vue3";
+    }, 1000);
+  </script>
+</html>

@@ -16,9 +16,7 @@ VueJS 是一个基于 JavaScript 的框架、用于构建**组件化**的用户�
 
 ::: tip
 
-- **快速上手**
-  - [如何配置 Vue 开发环境？](./usage/config-dev-env.md)
-  - 如何创建一个 Vue 应用？
+- [如何配置 Vue 开发环境？ 并创建第一个 Vue 应用](./usage/config-dev-env.md)
 - [模板语法 && 指令](./usage/template-syntax.md)
 - **响应系统：**
   - 计算属性 computed
@@ -28,6 +26,9 @@ VueJS 是一个基于 JavaScript 的框架、用于构建**组件化**的用户�
   - emit
   - 模板引用 ref
   - 组件 v-model
+  - nextTick 函数
+  - 生命周期钩子
+    - onMounted
   - [单文件组件 SFC](./usage/sfc.md)
 
 :::
@@ -193,58 +194,3 @@ function handleMyEvevt(msg) {
 ### `待处理` - 计算属性 computed
 
 ### `待处理` - 模板引用 ref attribute -->
-
-## #应用场景
-
-<!-- ## #原理探索
-
-### 1.为什么需要响应式？
-
-> 响应式：就是指当数据发生变化的时候，能够自动更新到视图上。
-
-::: code-group
-
-```js:line-numbers [1.不引用响应式概念，手动地渲染视图：]
-<div id="app"></div>
-<script>
-  let data = { name: "张三" };
-  const render = () => document.getElementById("app").innerHTML = data.name;
-  const init = () => render()
-
-  // 初始化
-  init();
-
-  // 在 1s 之后，改变数据 data.name，并手动地重新渲染视图
-  setTimeout(() => {
-    data.name = "李四";
-    render(); // [!code warning] // 手动更新视图
-  }, 1000);
-</scrip>
-```
-
-```ts:line-numbers {6-14} [2.引用响应式概念，自动地渲染视图：]
-let data = { name: "张三" };
-const render = () => (document.getElementById("app").innerHTML = data.name);
-const init = () => render();
-
-// 数据代理
-const proxy = new Proxy(data, {
-  get(target, key) {
-    return target[key];
-  },
-  set(target, key, value) {
-    target[key] = value;
-    render();
-  },
-});
-
-// 初始化
-init();
-
-// 在 1s 之后，改变数据 data.name，并触发代理对象 proxy 的 set 方法，自动更新视图
-setTimeout(() => {
-  proxy.name = "李四";
-}, 1000);
-```
-
-::: -->
