@@ -9,6 +9,7 @@
             "text": "ECMAScript 语法标准",
             "link": "/base/es/index.md"
           },
+
           {
             "text": "组件化",
             "link": "/base/componentization.md"
@@ -39,6 +40,11 @@
             "link": "/apps/webpage/index.md"
           }
         ]
+      },
+      {
+        "text": "附录",
+        "collapsed": false,
+        "items": [{ "text": "AST 抽象语法树", "link": "/appendix/ast.md" }]
       }
     ]
   }
