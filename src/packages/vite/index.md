@@ -22,7 +22,7 @@
 - 基本功能：
   1. [如何编写测试？](https://cn.vitest.dev/guide/#%E7%BC%96%E5%86%99%E6%B5%8B%E8%AF%95)
 - 开发环境：
-  1. [配置 JS 项目的 Vitest 测试环境](https://github.com/Da222Da/env/blob/master/web/vitest/js/READNE.md)
-  2. [配置 MonoRepo 项目的 Vitest 测试环境](https://github.com/Da222Da/env/tree/master/web/vitest/monorepo)
+  1. [配置 JS 项目的 Vitest 测试环境](https://github.com/Da222Da/web/blob/master/demo/vitest/js/READNE.md)
+  2. [配置 MonoRepo 项目的 Vitest 测试环境](https://github.com/Da222Da/web/tree/master/demo/vitest/monorepo)
 
 :::
