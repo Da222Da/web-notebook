@@ -7,6 +7,7 @@ Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行时环境，让 Jav
 ::: danger NodeJS 相关
 
 1. [使用 nvm 来管理 nodejs 的版本？](./nvm.md)
+2. [如何判断项目中是否存在某个文件？](./fs/is-exist.md)
 
 :::
 
@@ -15,6 +16,8 @@ Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行时环境，让 Jav
 > NodeJS 内置了 npm`Node Package Manager`，用于安装和管理 JS 程序包。
 
 1. [如何使用 NPM 来管理依赖包？](./npm/install.md)
-2. [如何使用 pnpm 来构建 MonoRepo 项目？](./npm/monorepo.md)
+2. [如何发布一个 NPM 包？](./npm/publish.md)
+3. [如何使用 pnpm 来构建 MonoRepo 项目？](./npm/monorepo.md)
+4. [如何检查 NPM 包是否最新版本、并自动更新？](./npm/check-latest.md)
 
 :::
