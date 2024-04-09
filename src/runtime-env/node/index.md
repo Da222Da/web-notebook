@@ -4,20 +4,19 @@ Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行时环境，让 Jav
 
 如果你想了解更多关于 NodeJS 的信息的话，请移步 [https://nodejs.org](https://nodejs.org).
 
-::: danger NodeJS 相关
+::: tip 知识体系
 
-1. [使用 nvm 来管理 nodejs 的版本？](./nvm.md)
-2. [如何判断项目中是否存在某个文件？](./fs/is-exist.md)
+- NPM 包管理器：[npm 简介](./npm/index.md)、[npm install 工作流](./npm/install.md)、[npm run 工作流](./npm/run.md)、[npx](./npm/npx.md)、[发布 package](./npm/publish.md)
+- 模块化：CommonJS、ES Module
+- 全局变量:`__filename`、`__dirname`
+- 内置模块：[fs 模块](./module/fs.md)
 
 :::
 
-::: warning NPM 相关
+::: danger 常见问题 && 场景示例
 
-> NodeJS 内置了 npm`Node Package Manager`，用于安装和管理 JS 程序包。
-
-1. [如何使用 NPM 来管理依赖包？](./npm/install.md)
-2. [如何发布一个 NPM 包？](./npm/publish.md)
-3. [如何使用 pnpm 来构建 MonoRepo 项目？](./npm/monorepo.md)
-4. [如何检查 NPM 包是否最新版本、并自动更新？](./npm/check-latest.md)
+1. [如何使用 nvm 来管理 nodejs 的版本？](./nvm.md)
+2. [如何使用 pnpm 来构建 MonoRepo 项目？](./npm/monorepo.md)
+3. [如何检查 NPM 包是否最新版本、并自动更新？](./npm/check-latest.md)
 
 :::
