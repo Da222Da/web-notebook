@@ -6,3 +6,10 @@ JavaScript（JS）工程化是指通过使用各种工具、技术和最佳实�
 
 - 常用的工程化方案：[Vite](../packages/vite/)、Webpack、Rollup
 - 常用的工具: [JS 编译器(Babel)](/packages/babel.md)、[JS 类型检查工具(TypeScript)](/packages/ts/)
+
+
+::: danger 什么是自动化测试？
+
+自动化测试，就是把我们平时对程序进行测试的操作，管理起来，不用每次都重复相同的测试操作。
+
+:::

@@ -1,4 +1,4 @@
-{
+export default {
   "home": {
     "items": [
       {
@@ -38,14 +38,18 @@
           {
             "text": "网页开发",
             "link": "/apps/webpage/index.md"
+          },
+          {
+            "text": "CLI 脚手架开发",
+            "link": "/apps/cli.md"
           }
         ]
       },
-      {
-        "text": "附录",
-        "collapsed": false,
-        "items": [{ "text": "AST 抽象语法树", "link": "/appendix/ast.md" }]
-      }
+      // {
+      //   "text": "附录",
+      //   "collapsed": false,
+      //   "items": [{ "text": "AST 抽象语法树", "link": "/appendix/ast.md" }]
+      // }
     ]
   }
 }

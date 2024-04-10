@@ -1,5 +1,5 @@
 import { defineConfig } from "vitepress";
-import sidebarData from "./sidebar.json";
+import sidebarData from "./sidebar.mjs";
 
 export default defineConfig({
   title: "基于 JS 的 Web 应用开发",

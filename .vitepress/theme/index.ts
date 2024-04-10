@@ -5,7 +5,7 @@ import AdComponent from "./AdComponent.vue";
 
 import "./index.css";
 
-import { ElButton } from "element-plus";
+import { ElButton, ElTooltip } from "element-plus";
 import "element-plus/dist/index.css";
 
 import PageHeader from "./components/PageHeader.vue";
@@ -19,6 +19,7 @@ export default {
   },
   enhanceApp({ app }) {
     app.component("ElButton", ElButton);
+    app.component("ElTooltip", ElTooltip);
     app.component("PageHeader", PageHeader);
   },
 };
