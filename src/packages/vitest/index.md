@@ -1,11 +1,10 @@
-<PageHeader content="Vitest 单元测试" />
+<PageHeader content="Vitest 单元测试框架" />
 
 > 选择 Vitest 的原因：默认支持 TS，不用配置一堆额外的东西。
 >
 > 想要查看更多信息的话，请移步 [Vitest 官网](https://cn.vitest.dev/guide/)
 
 单元测试，就是针对于代码测试进行记录、管理。
-
 
 ::: tip
 
