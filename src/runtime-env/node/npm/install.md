@@ -1,4 +1,4 @@
-<PageHeader content="npm install 的工作流程" />
+<PageHeader content="npm install xxx 的工作流程" />
 
 ![npm install 的工作流程](./imgs/npm-install-workflow.png)
 

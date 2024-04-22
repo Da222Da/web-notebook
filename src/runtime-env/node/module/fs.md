@@ -1,4 +1,6 @@
-<PageHeader content="fs 文件操作模块" />
+<PageHeader content="fs 文件处理" />
+
+> fs 模块，提供了一系列的方法和属性，用于操作项目中的文件。
 
 ## 1. fs.access() 判断某个文件是否存在?
 
