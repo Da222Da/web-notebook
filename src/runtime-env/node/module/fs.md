@@ -25,3 +25,58 @@ fs.access(filePath, fs.constants.F_OK, (err) => {
 
 1. 第一个参数是文件路径
 2. 第二个参数是文件访问权限`默认为fs.constants.F_OK，表示检查文件是否存在。`
+
+## 2. fs.lstatSync() 用于获取有关文件或目录的信息
+
+```js
+const fs = require("fs");
+
+// 遍历文件系统，查找所有目录
+function findDirectories(directory) {
+  fs.readdir(directory, (err, files) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+
+    files.forEach((filename) => {
+      if (fs.lstatSync(`${directory}/${filename}`).isDirectory() && filename !== "." && filename !== "..") {
+        console.log(`${directory}/${filename}`);
+        findDirectories(`${directory}/${filename}`);
+      }
+    });
+  });
+}
+
+findDirectories(".");
+```
+
+- 参数：文件路径
+- 返回值：fs.Stats 对象`一个包含文件类型、大小、权限和时间戳等信息`
+
+## 3. fs.isDirectory() 检查指定路径是否是一个目录（文件夹）
+
+```js
+const fs = require("fs");
+
+// 遍历文件系统，查找所有目录
+function findDirectories(directory) {
+  fs.readdir(directory, (err, files) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+
+    files.forEach((filename) => {
+      if (fs.lstatSync(`${directory}/${filename}`).isDirectory() && filename !== "." && filename !== "..") {
+        console.log(`${directory}/${filename}`);
+        findDirectories(`${directory}/${filename}`);
+      }
+    });
+  });
+}
+
+findDirectories(".");
+```
+
+- 返回值：Boolean
