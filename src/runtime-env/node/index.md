@@ -10,7 +10,6 @@ Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行时环境，让 Jav
 - 模块化：[CommonJS 模块化规范](./module/cjs.md)、[ES Module 模块化规范](./module/ejs.md)
 - 全局变量: [\_\_dirname 目录路径](./globals/dirname.md)、[process 进程对象](./globals/process.md)
 - 内置模块：[fs 文件处理](./module/fs.md)、[child_process 子进程](./module/child_process.md)
-- 应用场景：[CLI 脚手架](../../apps/cli.md)
 
 :::
 
