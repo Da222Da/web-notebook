@@ -1,4 +1,4 @@
-<PageHeader content="Typescript 函数" />
+<PageHeader content="函数" />
 
 ## 简介
 
@@ -6,7 +6,7 @@
 
 ```ts
 function add(x: number, y: number): number {
-  return x + y;
+	return x + y;
 }
 
 let result = add(1, 2);
@@ -22,11 +22,11 @@ let result = add(1, 2);
 
 ```ts
 function buildName(firstName: string, lastName?: string) {
-  if (lastName) {
-    return firstName + " " + lastName;
-  } else {
-    return firstName;
-  }
+	if (lastName) {
+		return firstName + " " + lastName;
+	} else {
+		return firstName;
+	}
 }
 
 let result1 = buildName("Bob"); // 正确
@@ -40,7 +40,7 @@ let result3 = buildName("Bob", "Adams"); // 正确
 
 ```ts
 function buildName(firstName: string, lastName = "Smith") {
-  return firstName + " " + lastName;
+	return firstName + " " + lastName;
 }
 
 let result1 = buildName("Bob"); // 正确
@@ -55,7 +55,7 @@ let result2 = buildName("Bob", undefined); // 正确
 
 ```ts
 function buildName(firstName: string, ...restOfName: string[]) {
-  return firstName + " " + restOfName.join(" ");
+	return firstName + " " + restOfName.join(" ");
 }
 
 let employeeName = buildName("Joseph", "Samuel", "Lucas", "MacKinzie");
@@ -69,11 +69,11 @@ let employeeName = buildName("Joseph", "Samuel", "Lucas", "MacKinzie");
 function reverse(x: number): number;
 function reverse(x: string): string;
 function reverse(x: number | string): number | string {
-  if (typeof x === "number") {
-    return Number(x.toString().split("").reverse().join(""));
-  } else if (typeof x === "string") {
-    return x.split("").reverse().join("");
-  }
+	if (typeof x === "number") {
+		return Number(x.toString().split("").reverse().join(""));
+	} else if (typeof x === "string") {
+		return x.split("").reverse().join("");
+	}
 }
 ```
 
@@ -83,7 +83,7 @@ function reverse(x: number | string): number | string {
 
 ```ts
 let myAdd = (x: number, y: number): number => {
-  return x + y;
+	return x + y;
 };
 ```
 
@@ -93,7 +93,7 @@ let myAdd = (x: number, y: number): number => {
 
 ```ts
 let myAdd = function (x: number, y: number): number {
-  return x + y;
+	return x + y;
 };
 ```
 
@@ -103,7 +103,7 @@ let myAdd = function (x: number, y: number): number {
 
 ```ts
 let myAdd = function (x: number, y: number): number {
-  return x + y;
+	return x + y;
 };
 ```
 
@@ -113,6 +113,6 @@ let myAdd = function (x: number, y: number): number {
 
 ```ts
 (function (x, y) {
-  return x + y;
+	return x + y;
 })(1, 2);
 ```

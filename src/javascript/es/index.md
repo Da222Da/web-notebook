@@ -4,14 +4,15 @@ ECMAScript 是 JavaScript 脚本语言的语法标准，由 W3C 国际组织定�
 
 如果你想了解更多信息的话，请移步 [MDN](https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript)。
 
-::: tip 快速上手指南：
+::: tip ECMAScript 知识结构
 
-1. 语法约定：[数据类型](./grammar/data-type.md)、变量、运算符、判断、循环、函数、类、模块
-2. 功能特性：
+1. 语法约定：[变量](./grammar/variable.md)、[数据类型](./grammar/data-type.md)、运算符、判断、循环、函数、[类](./grammar/class.md)、模块
+2. 内置对象
+   <!-- - [Array](./grammar/array.md)、[String](./grammar/string.md)、[Math](./grammar/math.md)、[Date](./grammar/date.md)、[RegExp](./grammar/regexp.md)、[JSON](./grammar/json.md) -->
+3. 功能特性：
    - 异步编程(Promise、async/await)
    - 迭代器、生成器 Generator
-   - [代理 Proxy 与反射 Reflect](./property/proxy-and-reflect.md)
-   <!-- - 面向对象编程 -->
+   - [代理 Proxy 与反射 Reflect](./grammar/proxy-and-reflect.md)
 
 :::
 

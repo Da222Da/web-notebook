@@ -1,0 +1,4 @@
+packages:
+  - "packages/*"
+  - "topic/*" # 话题
+  - "domain/*" # 领域
