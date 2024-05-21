@@ -1,6 +1,4 @@
-<PageHeader content="模板语法 && 指令" />
-
-## 简介
+<PageHeader content="模板语法" />
 
 模板语法是一种基于 HTML 的语法规则，它能够让开发者使用简洁和直观的`HTML 标记语法`，来描述组件实例与 UI 视图之间的关系。
 
@@ -39,7 +37,7 @@
 
 ::: warning 指令语法:
 
-![directive](../images/directive.png)
+![directive](./images/directive.png)
 
 :::
 
@@ -119,7 +117,7 @@
 
 ```html
 <ul>
-  <li v-for="(item, index) in items" :key="index">{{ item }}</li>
+	<li v-for="(item, index) in items" :key="index">{{ item }}</li>
 </ul>
 ```
 
