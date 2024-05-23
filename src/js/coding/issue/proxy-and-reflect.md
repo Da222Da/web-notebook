@@ -1,4 +1,4 @@
-<PageHeader content="代理 Proxy 与反射 Reflect" />
+<PageHeader content="代理 Proxy 与反射 Reflect之间的联系？" />
 
 ## 什么是代理 Proxy？
 
@@ -7,19 +7,19 @@
 ```js
 // 创建一个目标对象
 let target = {
-  message: "Hello, World!",
+	message: "Hello, World!",
 };
 
 // 创建一个代理对象
 let handler = {
-  get: function (target, prop, receiver) {
-    console.log(`Getting property "${prop}"`);
-    return target[prop];
-  },
-  set: function (target, prop, value) {
-    console.log(`Setting property "${prop}" to ${value}`);
-    target[prop] = value;
-  },
+	get: function (target, prop, receiver) {
+		console.log(`Getting property "${prop}"`);
+		return target[prop];
+	},
+	set: function (target, prop, value) {
+		console.log(`Setting property "${prop}" to ${value}`);
+		target[prop] = value;
+	},
 };
 
 let proxy = new Proxy(target, handler);
@@ -38,8 +38,8 @@ JavaScript 专门提供了一个`内置反射对象 Reflect`，用于检查或�
 ```js
 // 创建一个对象
 let obj = {
-  name: "Alice",
-  age: 30,
+	name: "Alice",
+	age: 30,
 };
 
 // 使用Reflect.get方法获取属性值
@@ -65,13 +65,13 @@ console.log(obj.age); // 输出: undefined
 
 ```js
 const user = {
-  name: "Jake",
+	name: "Jake",
 };
 const proxy = new Proxy(user, {
-  get(target, property, receiver) {
-    console.log(`Getting ${property}`);
-    return Reflect.get(...arguments);
-  },
+	get(target, property, receiver) {
+		console.log(`Getting ${property}`);
+		return Reflect.get(...arguments);
+	},
 });
 proxy.name; // Getting name
 ```

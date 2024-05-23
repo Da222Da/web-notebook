@@ -1,6 +1,4 @@
-<PageHeader content="变量" />
-
-在 JavaScript 中，变量是用来存储数据的容器。您可以将各种类型的数据赋值给变量，包括数字、字符串、布尔值、对象和函数等。变量在编程中用于存储和操作数据，使得代码更加灵活和可重用。
+<PageHeader content=" var、let、const 三者之间的区别？" />
 
 在 JavaScript 中，您可以使用关键字 var 、 let 或 const 来声明变量。像这样：
 

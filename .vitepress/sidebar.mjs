@@ -5,19 +5,23 @@ export default {
 				text: "JS 基础知识",
 				collapsed: false,
 				items: [
+					// {
+					// 	text: "ECMAScript 语法标准",
+					// 	link: "/js/es/index.md",
+					// },
+					// {
+					// 	text: "TypeScript 语法标准",
+					// 	link: "/js/ts/index.md",
+					// },
 					{
-						text: "ECMAScript 语法标准",
-						link: "/javascript/es/index.md",
-					},
-					{
-						text: "TypeScript 语法标准",
-						link: "/javascript/ts/index.md",
+						text: "JS 编码基础",
+						link: "/js/coding/index.md",
 					},
 					{
 						text: "组件化",
-						link: "/javascript/componentization/index.md",
+						link: "/js/componentization/index.md",
 					},
-					{ text: "工程化", link: "/javascript/engineering.md" },
+					{ text: "工程化", link: "/js/engineering.md" },
 				],
 			},
 			{
