@@ -1,4 +1,4 @@
-<PageHeader content="泛型" />
+# 泛型
 
 ## 什么是泛型？
 

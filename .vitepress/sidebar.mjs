@@ -2,20 +2,32 @@ export default {
 	home: {
 		items: [
 			{
-				text: "JS 基础知识",
+				text: "JavaScript 编程语言",
 				collapsed: false,
 				items: [
-					// {
-					// 	text: "ECMAScript 语法标准",
-					// 	link: "/js/es/index.md",
-					// },
-					// {
-					// 	text: "TypeScript 语法标准",
-					// 	link: "/js/ts/index.md",
-					// },
 					{
-						text: "JS 编码基础",
-						link: "/js/coding/index.md",
+						text: "ECMAScript 语法标准",
+						items: [
+							{
+								text: "ES 语法约定",
+								link: "/js/grammar/es.md",
+							},
+							{
+								text: "TS 语法约定",
+								link: "/js/grammar/ts/index.md",
+								collapsed: true,
+								items: [
+									{
+										text: "泛型",
+										link: "/js/grammar/ts/generics.md",
+									},
+									{
+										text: "接口",
+										link: "/js/grammar/ts/interface.md",
+									},
+								],
+							},
+						],
 					},
 					{
 						text: "组件化",
@@ -38,20 +50,20 @@ export default {
 					},
 				],
 			},
-			{
-				text: "应用场景",
-				collapsed: false,
-				items: [
-					{
-						text: "网页开发",
-						link: "/apps/webpage/index.md",
-					},
-					{
-						text: "CLI 脚手架开发",
-						link: "/apps/cli.md",
-					},
-				],
-			},
+			// {
+			// 	text: "应用场景",
+			// 	collapsed: false,
+			// 	items: [
+			// 		{
+			// 			text: "网页开发",
+			// 			link: "/apps/webpage/index.md",
+			// 		},
+			// 		{
+			// 			text: "CLI 脚手架开发",
+			// 			link: "/apps/cli.md",
+			// 		},
+			// 	],
+			// },
 			// {
 			//   "text": "附录",
 			//   "collapsed": false,

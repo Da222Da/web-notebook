@@ -1,4 +1,4 @@
-<PageHeader content="接口 Interface" />
+# 接口
 
 ## 约束 Object 对象
 

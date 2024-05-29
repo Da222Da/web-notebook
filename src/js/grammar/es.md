@@ -1,6 +1,6 @@
-<PageHeader content="ECMAScript 语法标准" />
+# ES 语法约定
 
-ECMAScript 是 JavaScript 脚本语言的语法标准，由 W3C 国际组织定义。
+ES 语法约定, 是 JavaScript 官方`W3C 国际组织`定义的语法。
 
 如果你想了解更多信息的话，请移步 [MDN](https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript)。
 
