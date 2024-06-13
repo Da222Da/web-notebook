@@ -15,23 +15,18 @@ export default {
 							{
 								text: "TS 语法约定",
 								link: "/js/grammar/ts/index.md",
-								collapsed: true,
-								items: [
-									{
-										text: "泛型",
-										link: "/js/grammar/ts/generics.md",
-									},
-									{
-										text: "接口",
-										link: "/js/grammar/ts/interface.md",
-									},
-								],
 							},
 						],
 					},
 					{
 						text: "组件化",
 						link: "/js/componentization/index.md",
+						items: [
+							{
+								text: "VueJS",
+								link: "/js/componentization/vue/index.md",
+							},
+						],
 					},
 					{ text: "工程化", link: "/js/engineering.md" },
 				],

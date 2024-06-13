@@ -37,7 +37,7 @@
 
 ::: warning 指令语法:
 
-![directive](./images/directive.png)
+![directive](./directive.png)
 
 :::
 

@@ -1,17 +1,16 @@
 # TypeScript 语法标准
 
-Typescript 是 ECMAScript 语法标准的另外一种实现，它向下兼容了 JavaScript，并且增加了类型系统和一些新的特性。
+Typescript 是 ECMAScript 语法标准的另外一种实现，它向下兼容了 JavaScript，并且增加了类型系统`可以避免很多低级错误`和一些新的特性。
 
-如何想要查看更多内容的话，请移步 [TS 官网](https://www.typescriptlang.org/) & [https://basarat.gitbook.io/typescript/](https://basarat.gitbook.io/typescript/)。
+如果想要查看更多内容的话，请移步 [TS 官网](https://www.typescriptlang.org/) & [https://basarat.gitbook.io/typescript/](https://basarat.gitbook.io/typescript/)。
 
-::: danger 选用 TS 的原因
+<!-- ::: danger
 
-- 类型检查，可以避免很多低级错误。
-- 类型推断，可以减少很多重复代码。
-
-:::
+::: -->
 
 ## 1.数据类型
+
+### 1-1.基础数据类型
 
 ```js
 // 原始数据类型
@@ -62,10 +61,22 @@ let never: never = undefined; // 永不存在的值的类型
 // 未知类型
 let unknown: unknown = "Hello World!"; // 未知类型
 
-// 联合类型
-let arr1: number[] = [1, 2, 3]; // 数组
-let arr2: Array<number> = [1, 2, 3]; // 泛型数组
+```
 
+### 1-2.泛型 Generic
+
+泛型是 TypeScript 中的一个特性，它允许我们在编写代码时不指定类型，而是在运行时指定类型。这使得我们可以编写更通用的代码，并且可以减少代码中的类型错误。
+
+下面是一个简单的泛型示例：
+
+```ts
+function sum<T>(a: T, b: T): T {
+	return a + b;
+}
+
+sum(1, 2); // 3
+sum("a", "b"); // 'ab'
+sum(true, false); // true
 ```
 
 ## 2.变量
