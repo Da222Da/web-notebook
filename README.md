@@ -14,32 +14,12 @@ Want to see more content, please visit: [https://da222da.github.io/webjs/](https
 
 <!-- ## Table Of Content 目录
 
-1. Internet
-2. HTML
-3. CSS
-4. JavaScript
 
-   - ECMAScript
-   - TypeScript
-   - ESLint
-   - Babel
+Web 软件系统生命周期：
 
-5. Browser
+- 开发阶段： CLI 组件库 基础依赖库 =》 核心在于提升效率，减少重复劳动
+- 部署阶段： CI/CD 预发 线上
+- 运行阶段： 稳定性 容灾演练 安全防护 压测 AB 灰度
+- 维护阶段： 警告监控
 
-   - DOM
-     - ReactJS
-     - VueJS
-   - 可视化
-   - Editor
-
-6. NodeJS
-
-   - NPM
-   - CLI APP
-   - Web Server
-     - KoaJS
-
-7. 工程化
-
-   - [WebpackJS](./engineering/webpack/README.md)
-   - RollupJS -->
+-->

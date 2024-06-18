@@ -2,7 +2,7 @@ export default {
 	home: {
 		items: [
 			{
-				text: "JavaScript 编程语言",
+				text: "JavaScript 编程基础",
 				collapsed: false,
 				items: [
 					{
@@ -29,6 +29,16 @@ export default {
 						],
 					},
 					{ text: "工程化", link: "/js/engineering.md" },
+				],
+			},
+			{
+				text: "JavaScript 编程理论",
+				collapsed: false,
+				items: [
+					{
+						text: "设计模式",
+						link: "/theory/design-mode/index.md",
+					},
 				],
 			},
 			{
