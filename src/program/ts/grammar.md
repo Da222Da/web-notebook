@@ -230,7 +230,7 @@ let myAdd = function (x: number, y: number): number {
 })(1, 2);
 ```
 
-## 6.类
+## 6.面向对象
 
 ### 6-1. 类声明 class
 
