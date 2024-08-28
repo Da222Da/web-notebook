@@ -6,10 +6,10 @@ JavaScript（JS）工程化是指通过使用各种工具、技术和最佳实�
 
 ::: tip 知识体系
 
-- 构建工具: [Vite](../packages/vite/)、Webpack、Rollup
+- 构建工具: Vite、Webpack、Rollup
 - 代码规范与质量保证：ESLint
-- 自动化测试：[Jest](/packages/jest/)、[Vitest](/packages/vitest/)
-- 跨平台兼容： [Babel](/packages/babel.md)
+- 自动化测试：Jest、Vitest
+- 跨平台兼容： Babel
 
 :::
 
