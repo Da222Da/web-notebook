@@ -1,6 +1,6 @@
 # ES 语法约定
 
-ES 语法约定, 是 JavaScript 官方`W3C 国际组织`定义的语法。
+ECMAScript 语法约定, 是 JavaScript 官方`W3C 国际组织`定义的语法。
 
 如果你想了解更多信息的话，请移步 [MDN](https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript)。
 
@@ -35,8 +35,6 @@ const reflect = new Reflect(); // 反射
 
 ## 2.变量
 
-### 2-1.变量声明
-
 ```js
 // 声明变量
 let a = 10;
@@ -44,7 +42,7 @@ const b = 20;
 var c = 30;
 ```
 
-### 2-2.变量运算
+## 3.运算符
 
 ```js
 // 算术运算符
@@ -94,7 +92,7 @@ const result = a + b * c; // 乘法运算优先级高于加法运算
 const result2 = (a + b) * c; // 括号可以改变运算顺序
 ```
 
-## 3.逻辑语句
+## 4.语句
 
 > 语句：指示计算机执行特定操作的指令
 
@@ -144,7 +142,7 @@ throw; // 抛出异常
 yield; // 生成器
 ```
 
-## 4.函数
+## 5.函数
 
 ```js
 // 函数声明
@@ -191,16 +189,16 @@ add(1, 2, 3, 4, 5);
 
 ```
 
-## 5.类
+## 6.类
 
-### 5-1. 类声明
+### 6-1. 类声明
 
 ```js
 // 空类
 class Person {}
 ```
 
-### 5-2. 类的成员
+### 6-2. 类的成员
 
 ```js
 // 动态特征：属性和方法
@@ -223,7 +221,7 @@ class Person {
 new Person("张三");
 ```
 
-### 5-3. 静态特征 static
+### 6-3. 静态特征 static
 
 ```js
 // 静态属性
@@ -243,7 +241,7 @@ class Person {
 Person.sayHello(); // Hello
 ```
 
-### 5-4. 访问器 getter/setter
+### 6-4. 访问器 getter/setter
 
 ```js
 class Point {
@@ -260,7 +258,7 @@ class Point {
 }
 ```
 
-### 5-5. 继承 extends
+### 6-5. 继承 extends
 
 ```js
 class Animal {
@@ -282,7 +280,7 @@ const dog = new Dog("Dog");
 dog.sayHello(); // Hello, my name is Dog
 ```
 
-## 6.模块
+## 7.模块
 
 ```js
 // export 导出

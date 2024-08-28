@@ -1,16 +1,10 @@
 # TypeScript 语法标准
 
-Typescript 是 ECMAScript 语法标准的另外一种实现，它向下兼容了 JavaScript，并且增加了类型系统`可以避免很多低级错误`和一些新的特性。
+Typescript 是 ECMAScript 语法标准的另外一种实现，它向下兼容了 JavaScript，并且增加了类型系统`可以避免很多低级错误`和一些新的特性，例如：[泛型](./peculiarity/generic.md)。
 
 如果想要查看更多内容的话，请移步 [TS 官网](https://www.typescriptlang.org/) & [https://basarat.gitbook.io/typescript/](https://basarat.gitbook.io/typescript/)。
 
-<!-- ::: danger
-
-::: -->
-
 ## 1.数据类型
-
-### 1-1.基础数据类型
 
 ```js
 // 原始数据类型
@@ -63,25 +57,7 @@ let unknown: unknown = "Hello World!"; // 未知类型
 
 ```
 
-### 1-2.泛型 Generic
-
-泛型是 TypeScript 中的一个特性，它允许我们在编写代码时不指定类型，而是在运行时指定类型。这使得我们可以编写更通用的代码，并且可以减少代码中的类型错误。
-
-下面是一个简单的泛型示例：
-
-```ts
-function sum<T>(a: T, b: T): T {
-	return a + b;
-}
-
-sum(1, 2); // 3
-sum("a", "b"); // 'ab'
-sum(true, false); // true
-```
-
 ## 2.变量
-
-### 2-1.变量声明
 
 ```js
 // 声明变量
@@ -90,7 +66,7 @@ const b = 20;
 var c = 30;
 ```
 
-### 2-2.变量运算
+## 3.运算符
 
 ```js
 // 算术运算符
@@ -140,7 +116,7 @@ const result = a + b * c; // 乘法运算优先级高于加法运算
 const result2 = (a + b) * c; // 括号可以改变运算顺序
 ```
 
-## 3.逻辑语句
+## 4.语句
 
 > 语句：指示计算机执行特定操作的指令
 
@@ -190,7 +166,7 @@ throw; // 抛出异常
 yield; // 生成器
 ```
 
-## 4.函数
+## 5.函数
 
 函数，就是一段可以重复调用的代码块。像这样：
 
@@ -254,16 +230,16 @@ let myAdd = function (x: number, y: number): number {
 })(1, 2);
 ```
 
-## 5.类
+## 6.类
 
-### 5-1. 类声明 class
+### 6-1. 类声明 class
 
 ```js
 // 空类
 class Person {}
 ```
 
-### 5-2. 类的成员：属性和方法
+### 6-2. 类的成员：属性和方法
 
 ```ts
 class Person {
@@ -274,7 +250,7 @@ class Person {
 }
 ```
 
-### 5-3. 构造器 constructor
+### 6-3. 构造器 constructor
 
 ```ts
 class Person {
@@ -286,7 +262,7 @@ class Person {
 new Person("张三");
 ```
 
-### 5-4. 只读属性 readonly
+### 6-4. 只读属性 readonly
 
 只读属性。就是不允许修改的属性。
 
@@ -303,7 +279,7 @@ const pt = new Point(0, 0);
 pt.x = 1; // 报错：Cannot assign to 'x' because it is a read-only property.
 ```
 
-### 5-5. 静态属性 static
+### 6-5. 静态属性 static
 
 类本身的属性。类本身的属性。
 
@@ -314,7 +290,7 @@ class Point {
 console.log(Point.origin); // (0, 0)
 ```
 
-### 5-6. 访问器 getter/setter
+### 6-6. 访问器 getter/setter
 
 ```ts
 class Point {
@@ -331,7 +307,7 @@ class Point {
 }
 ```
 
-### 5-7. 继承 extends
+### 6-7. 继承 extends
 
 在派生类中，可以使用`super`关键字来访问基类的属性和方法。
 
@@ -353,7 +329,7 @@ class Derived extends Base {
 }
 ```
 
-### 5-8. 属性可见度 public | private | protected
+### 6-8. 属性可见度 public | private | protected
 
 1. 公共属性 public`默认`，可以在类的内部和外部访问。
 
@@ -411,7 +387,7 @@ const b = new Base();
 console.log(b.x); // 外部访问报错：Property 'x' is private and only accessible within class 'Base'.
 ```
 
-### 5-9. 抽象类 abstract
+### 6-9. 抽象类 abstract
 
 抽象类是提供其他类继承的基类，不能直接被实例化。
 
@@ -434,7 +410,7 @@ dog.makeSound();
 dog.move();
 ```
 
-### 5-10. 接口约束 implements
+### 6-10. 接口约束 implements
 
 使用`implements 关键词`来检查类是否满足特定的`interface 接口`. 如果类未能正确实现它，将会发出错误。
 
@@ -460,7 +436,7 @@ class Phone implements ClockInterface, GameInterface {
 }
 ```
 
-## 6.模块
+## 7.模块
 
 ```js
 // export 导出
