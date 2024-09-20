@@ -8,7 +8,7 @@ import "./index.css";
 import { ElButton, ElTooltip } from "element-plus";
 import "element-plus/dist/index.css";
 
-import WujieVue from "wujie-vue3";
+// import WujieVue from "wujie-vue3";
 
 import PageHeader from "./components/PageHeader.vue";
 
@@ -23,6 +23,6 @@ export default {
 		app.component("ElButton", ElButton);
 		app.component("ElTooltip", ElTooltip);
 		app.component("PageHeader", PageHeader);
-		app.component("WujieVue", WujieVue); // 无界-微前端框架
+		// app.component("WujieVue", WujieVue); // 无界-微前端框架
 	},
 };
