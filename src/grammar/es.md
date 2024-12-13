@@ -4,9 +4,41 @@ ECMAScript 语法约定, 是 JavaScript 官方`W3C 国际组织`定义的语法�
 
 如果你想了解更多信息的话，请移步 [MDN](https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript)。
 
-## 1.数据类型
+## 1.Graph 知识图表
 
-```js
+<Mind :mindData="mindData" />
+
+<script setup>
+import { onMounted, ref } from "vue";
+const mindData = ref({
+	id: "root",
+	topic: "ES 语法",
+	children: [
+		{
+			id: "data-type",
+			topic: "数据类型：原始数据 & 引用数据",
+		},
+		{
+			id: "variable",
+			topic: "变量：声明变量 & 变量提升 & 变量作用域",
+		},
+		{
+			id: "powerful",
+			topic: "Powerful",
+			direction: "right",
+			children: [
+				{ id: "powerful1", topic: "Base on Javascript" },
+				{ id: "powerful2", topic: "Base on HTML5" },
+				{ id: "powerful3", topic: "Depends on you" },
+			],
+		},
+	],
+})
+</script>
+
+## 2.Prompt 问答记录
+
+<!-- ```js
 // 原始数据类型
 const str = "Hello World!"; // 字符串
 const num = 123; // 数字
@@ -307,4 +339,4 @@ export * from "./math.js";
 
 // 导入所有
 import * as math from "./math.js";
-```
+``` -->

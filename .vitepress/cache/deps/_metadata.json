@@ -1,56 +1,65 @@
 {
-  "hash": "736a2bac",
-  "browserHash": "cce5f8fd",
+  "hash": "357adef5",
+  "browserHash": "5a20578e",
   "optimized": {
     "vue": {
       "src": "../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "edbe5f21",
+      "fileHash": "f66fa09a",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../node_modules/@vue/devtools-api/lib/esm/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "ed353b61",
+      "fileHash": "bba7b87d",
       "needsInterop": false
     },
     "vitepress > @vueuse/integrations/useFocusTrap": {
       "src": "../../../node_modules/@vueuse/integrations/useFocusTrap.mjs",
       "file": "vitepress___@vueuse_integrations_useFocusTrap.js",
-      "fileHash": "fc9540b6",
+      "fileHash": "d1a0dcd4",
       "needsInterop": false
     },
     "vitepress > mark.js/src/vanilla.js": {
       "src": "../../../node_modules/mark.js/src/vanilla.js",
       "file": "vitepress___mark__js_src_vanilla__js.js",
-      "fileHash": "5a6f244a",
+      "fileHash": "fe7ece82",
       "needsInterop": false
     },
     "vitepress > minisearch": {
       "src": "../../../node_modules/minisearch/dist/es/index.js",
       "file": "vitepress___minisearch.js",
-      "fileHash": "48f502c4",
+      "fileHash": "ea0de249",
       "needsInterop": false
     },
     "element-plus": {
       "src": "../../../node_modules/element-plus/es/index.mjs",
       "file": "element-plus.js",
-      "fileHash": "c4b002c7",
+      "fileHash": "155e5629",
       "needsInterop": false
     },
-    "wujie-vue3": {
-      "src": "../../../node_modules/wujie-vue3/esm/index.js",
-      "file": "wujie-vue3.js",
-      "fileHash": "a9f51889",
-      "needsInterop": false
+    "jsmind": {
+      "src": "../../../node_modules/jsmind/es6/jsmind.js",
+      "file": "jsmind.js",
+      "fileHash": "8a5f1093",
+      "needsInterop": true
+    },
+    "jsmind/draggable-node": {
+      "src": "../../../node_modules/jsmind/es6/jsmind.draggable-node.js",
+      "file": "jsmind_draggable-node.js",
+      "fileHash": "879dac05",
+      "needsInterop": true
     }
   },
   "chunks": {
     "chunk-CSRWY6EZ": {
       "file": "chunk-CSRWY6EZ.js"
     },
-    "chunk-UXIASGQL": {
-      "file": "chunk-UXIASGQL.js"
+    "chunk-4KODZ5DT": {
+      "file": "chunk-4KODZ5DT.js"
+    },
+    "chunk-TCQZMY3T": {
+      "file": "chunk-TCQZMY3T.js"
     }
   }
 }

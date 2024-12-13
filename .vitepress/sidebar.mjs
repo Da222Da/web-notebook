@@ -6,15 +6,15 @@ export default {
 				collapsed: false,
 				items: [
 					{
-						text: "编程语言",
+						text: "JavaScript 编程语言",
 						items: [
 							{
 								text: "ES 语法约定",
-								link: "/program/es/grammar.md",
+								link: "/grammar/es.md",
 							},
 							{
 								text: "TS 语法约定",
-								link: "/program/ts/grammar.md",
+								link: "/grammar/ts.md",
 							},
 						],
 					},
