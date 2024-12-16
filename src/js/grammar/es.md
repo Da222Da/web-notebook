@@ -6,35 +6,21 @@ ECMAScript 语法约定, 是 JavaScript 官方`W3C 国际组织`定义的语法�
 
 ## 1.Graph 知识图表
 
-<!-- <Mind :mindData="mindData" />
-
+<Mind :data="data" />
 <script setup>
 import { onMounted, ref } from "vue";
-const mindData = ref({
-	id: "root",
-	topic: "ES 语法",
-	children: [
-		{
-			id: "data-type",
-			topic: "数据类型：原始数据 & 引用数据",
-		},
-		{
-			id: "variable",
-			topic: "变量：声明变量 & 变量提升 & 变量作用域",
-		},
-		{
-			id: "powerful",
-			topic: "Powerful",
-			direction: "right",
+const data = ref({
+			data: {
+				text: "ES 语法",
+			},
 			children: [
-				{ id: "powerful1", topic: "Base on Javascript" },
-				{ id: "powerful2", topic: "Base on HTML5" },
-				{ id: "powerful3", topic: "Depends on you" },
+				{
+					data: { text: "数据类型：原始数据 & 引用数据" },
+				},
+				{ data: { text: "变量：声明变量 & 变量提升 & 变量作用域" } },
 			],
-		},
-	],
-})
-</script> -->
+		})
+</script>
 
 ## 2.Prompt 问答记录
 
