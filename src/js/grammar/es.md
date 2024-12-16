@@ -6,7 +6,7 @@ ECMAScript 语法约定, 是 JavaScript 官方`W3C 国际组织`定义的语法�
 
 ## 1.Graph 知识图表
 
-<Mind :mindData="mindData" />
+<!-- <Mind :mindData="mindData" />
 
 <script setup>
 import { onMounted, ref } from "vue";
@@ -34,7 +34,7 @@ const mindData = ref({
 		},
 	],
 })
-</script>
+</script> -->
 
 ## 2.Prompt 问答记录
 
