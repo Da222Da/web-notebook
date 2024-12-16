@@ -2,19 +2,19 @@ export default {
 	home: {
 		items: [
 			{
-				text: "基础知识",
+				text: "JavaScript 基础知识",
 				collapsed: false,
 				items: [
 					{
-						text: "JavaScript 编程语言",
+						text: "语法约定",
 						items: [
 							{
 								text: "ES 语法约定",
-								link: "/grammar/es.md",
+								link: "/js/grammar/es.md",
 							},
 							{
 								text: "TS 语法约定",
-								link: "/grammar/ts.md",
+								link: "/js/grammar/ts.md",
 							},
 						],
 					},
@@ -46,7 +46,7 @@ export default {
 				],
 			},
 			{
-				text: "思考 & 实践",
+				text: "应用 & 实践",
 				collapsed: false,
 				items: [
 					{
