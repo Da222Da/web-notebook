@@ -1,9 +1,8 @@
 import { defineConfig } from "vitepress";
-import sidebarData from "./sidebar.mjs";
 
 export default defineConfig({
-	title: "Web 应用开发",
-	description: "基于 JavaScript 的 Web 应用开发。",
+	title: "Web 互联网",
+	description: "探索 Web 万物互联技术",
 	base: "/web/",
 	srcDir: "src",
 	head: [["link", { rel: "stylesheet", href: "" }]],
@@ -20,16 +19,67 @@ export default defineConfig({
 	},
 });
 function sidebar() {
-	let obj = {};
-	const data = sidebarData;
-	for (let key in data) {
-		if (key == "home") {
-			obj["/"] = data[key];
-		} else {
-			obj[`/${key}/`] = data[key];
-		}
-	}
-	return obj;
+	return {
+		ignoreDeadLinks: true,
+		"/": {
+			items: [
+				{
+					text: "JavaScript 客户端",
+					collapsed: false,
+					items: [
+						{
+							text: "语法约定",
+							items: [
+								{
+									text: "ES 语法约定",
+									link: "/js/grammar/es.md",
+								},
+								{
+									text: "TS 语法约定",
+									link: "/js/grammar/ts.md",
+								},
+							],
+						},
+						{
+							text: "前端组件化",
+							link: "/componentization/index.md",
+							items: [
+								{
+									text: "VueJS",
+									link: "/componentization/vue/index.md",
+								},
+							],
+						},
+						{ text: "前端工程化", link: "/engineering/index.md" },
+						{
+							text: "运行时环境",
+							collapsed: false,
+							items: [
+								{
+									text: "浏览器",
+									link: "/runtime-env/browser/index.md",
+								},
+								{
+									text: "NodeJS",
+									link: "/runtime-env/node/index.md",
+								},
+							],
+						},
+					],
+				},
+				{
+					text: "应用 & 实践",
+					collapsed: false,
+					items: [
+						// {
+						// 	text: "CLI 脚手架开发",
+						// 	link: "/apps/cli.md",
+						// },
+					],
+				},
+			],
+		},
+	};
 }
 
 function nav() {
