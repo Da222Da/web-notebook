@@ -5,6 +5,7 @@
 <script setup>
 import { onMounted, defineProps } from "vue";
 import MindMap from "simple-mind-map";
+// import MindMap from "./mindmap.js";
 
 const props = defineProps({
 	data: Object,

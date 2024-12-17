@@ -2,7 +2,7 @@
 import { h } from "vue";
 import DefaultTheme from "vitepress/theme";
 import AdComponent from "./AdComponent.vue";
-import Mind from "./components/Mind.vue";
+// import Mind from "";
 
 import "./index.css";
 
@@ -20,10 +20,16 @@ export default {
 		});
 	},
 	enhanceApp({ app }) {
+		console.log("app::: ", app);
 		app.component("ElButton", ElButton);
 		app.component("ElTooltip", ElTooltip);
 		app.component("PageHeader", PageHeader);
-		app.component("Mind", Mind);
-		// app.component("WujieVue", WujieVue); // 无界-微前端框架
+		app.mixin({
+			mounted() {
+				import("./components/Mind.vue").then((module) => {
+					app.component("Mind", module.default);
+				});
+			},
+		});
 	},
 };
