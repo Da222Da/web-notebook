@@ -6,7 +6,7 @@ ECMAScript 语法约定, 是 JavaScript 官方`W3C 国际组织`定义的语法�
 
 ## 1.Graph 知识图表
 
-<Mind :data="data" />
+<Mind :data="data" height="600" />
 <script setup>
 import { onMounted, ref } from "vue";
 const data = ref({
@@ -14,221 +14,174 @@ const data = ref({
 				text: "ES 语法",
 			},
 			children: [
-				{
-					data: { text: "数据类型：原始数据 & 引用数据" },
-				},
-				{ data: { text: "变量：声明变量 & 变量提升 & 变量作用域" } },
+				{ data: { text: "数据类型：原始数据 & 引用数据" } },
+				{ data: { text: "变量：声明变量 & 变量提升 & 变量作用域 & 闭包" } },
+				{ data: { text: "运算符：算术 & 比较 & 逻辑 & 赋值 & 字符串" } },
+				{ data: { text: "语句：If 条件判断 & Switch 分支 & For、While循环" } },
+				{ data: { text: "函数：声明函数 & 箭头函数 & 立即执行函数" } },
+				{ data: { text: "面向对象：声明类 & 构造器 & 实例化 & 访问器 & 继承" } },
+				{ data: { text: "模块化：导入 & 导出" } },
 			],
 		})
 </script>
 
-## 2.Prompt 问答记录
+## 2.Prompt 提问记录
 
-<!-- ```js
+### 2-1. 数据类型有哪些？
+
+对于 JavaScript 的数据类型，我们只需要记住 5 个原始数据类型和 2 个引用数据类型，即可！
+
+```js
 // 原始数据类型
 const str = "Hello World!"; // 字符串
 const num = 123; // 数字
 const bool = true; // 布尔值
 const und = undefined; // undefined
-const nul = null; // null
-const sym = Symbol("symbol"); // symbol 唯一值
+const null = null; // null
 
 // 引用数据类型
-const obj = { name: "John" }; // 对象
-const arr = [1, 2, 3]; // 数组
-const func = function () {}; // 函数
-const map = new Map(); // Map
-const weakMap = new WeakMap(); // WeakMap
-const set = new Set(); // Set
-const weakSet = new WeakSet(); // WeakSet
-const date = new Date(); // 日期
-const regexp = /\d+/; // 正则表达式
-const error = new Error("Error message"); // 错误
-const iter = new Iterator(); // 迭代器
-const gen = new Generator(); // 生成器
-const async = async function () {}; // 异步函数
-const proxy = new Proxy({}, {}); // 代理
-const reflect = new Reflect(); // 反射
+const arr = [1, 2, 3]; // 数组，代表有序数据集合
+const obj = { name: "John" }; // 对象，代表无序数据集合
 ```
 
-## 2.变量
+### 2-2. 如何声明变量？
 
 ```js
-// 声明变量
+var c = 30; // 早期 JS 变量声明方式，尽量少用
 let a = 10;
-const b = 20;
-var c = 30;
+const B = 20; // 使用 const 声明常量
 ```
 
-## 3.运算符
+### 2-3. var 变量提升是怎么回事？
 
 ```js
-// 算术运算符
-const a = 10;
-const b = 3;
-const c = a + b; // 加法
-const d = a - b; // 减法
-const e = a * b; // 乘法
-const f = a / b; // 除法
-const g = a % b; // 取模
-const h = a ** b; // 幂运算
+console.log(a); // undefined
+var a = 10; // var 声明的变量存在变量提升，即变量可以在声明之前使用，但值为 undefined
+console.log(a); // 10
 
-// 比较运算符
-const i = a > b; // 大于
-const j = a < b; // 小于
-const k = a >= b; // 大于等于
-const l = a <= b; // 小于等于
-const m = a == b; // 等于
-const n = a != b; // 不等于
-const o = a === b; // 严格相等
-const p = a !== b; // 严格不相等
+// JS 引擎执行过程：预编译阶段 -> 执行阶段。
+// 预编译阶段： JS 引擎在解析代码的时候，将 var 声明变量放在了作用域的头部。
+// 预编译之后的代码，如下：
+// var a = undefined;
+// console.log(a);
+// a = 10;
+// console.log(a);
+```
 
-// 逻辑运算符
-const q = a && b; // 逻辑与
-const r = a || b; // 逻辑或
-const s = !a; // 逻辑非
+### 2-4. 什么是变量作用域？
 
-// 赋值运算符
-const t = (a += b); // 加法赋值
-const u = (a -= b); // 减法赋值
-const v = (a *= b); // 乘法赋值
-const w = (a /= b); // 除法赋值
-const x = (a %= b); // 取模赋值
-const y = (a **= b); // 幂运算赋值
+```js
+// 全局作用域
+var a = 10; // 全局变量，在任何位置都可以使用
+function test() {
+	// 函数作用域
+	var b = 20; // 局部变量，只能在函数内部使用
+}
+```
 
-// 条件运算符
-const z = a > b ? a : b; // 三元运算符
+### 2-5. 什么是闭包？
 
+```js
+// 闭包的作用：如何让一个外部函数能够访问另一个函数中的变量？
+function fn() {
+	var a = 10;
+	function outer() {
+		console.log(a);
+	}
+	return outer;
+}
+var outerFunc = fn();
+outerFunc(); // 输出 10
+```
+
+### 2-6. 字符串运算符怎么写？
+
+```js
 // 字符串运算符
 const str1 = "Hello";
 const str2 = "World";
 const str3 = str1 + " " + str2; // 字符串拼接
 const str4 = `${str1} ${str2}`; // 模板字符串
-
-// 运算符优先级
-const result = a + b * c; // 乘法运算优先级高于加法运算
-const result2 = (a + b) * c; // 括号可以改变运算顺序
 ```
 
-## 4.语句
-
-> 语句：指示计算机执行特定操作的指令
+### 2-7. IF 条件语句怎么写？
 
 ```js
-// 条件语句
 if (a > b) {
-  console.log("a大于b");
+	console.log("a大于b");
 } else if (a < b) {
-  console.log("a小于b");
+	console.log("a小于b");
 } else {
-  console.log("a等于b");
+	console.log("a等于b");
 }
-
-switch (a) {
-  case 1:
-    console.log("a等于1");
-    break;
-  case 2:
-    console.log("a等于2");
-    break;
-  default:
-    console.log("a不等于1和2");
-}
-
-// 循环语句
-for (let i = 0; i < 10; i++) {
-  console.log(i);
-}
-
-let j = 0;
-while (j < 10) {
-  console.log(j);
-  j++;
-}
-
-let k = 0;
-do {
-  console.log(k);
-  k++;
-} while (k < 10);
-
-// 跳转语句
-break; // 跳出循环
-continue; // 跳过本次循环
-return; // 返回函数
-throw; // 抛出异常
-yield; // 生成器
 ```
 
-## 5.函数
+### 2-8. Switch 分支语句怎么写？
+
+```js
+switch (a) {
+	case 1:
+		console.log("a等于1");
+		break;
+	case 2:
+		console.log("a等于2");
+		break;
+	default:
+		console.log("a不等于1和2");
+}
+```
+
+### 2-9. For & While 循环语句怎么写？
+
+```js
+// for 循环
+for (let i = 0; i < 10; i++) {
+	console.log(i);
+}
+
+// while 循环
+let j = 0;
+while (j < 10) {
+	console.log(j);
+	j++;
+}
+```
+
+### 2-10. 如何声明函数？
 
 ```js
 // 函数声明
-function add(a, b) {
+function add(a, b = 2) {
 	return a + b;
 }
 
 // 函数调用
-add(1, 2);
 add(1);
+add(1, 2);
+```
 
-// 函数表达式
-const add = function (a, b) {
-	return a + b;
-};
+### 2-11. 什么是箭头函数？
 
-// 箭头函数
+```js
+// 箭头函数：函数的简写方式
 const add = (a, b) => a + b;
+```
 
-// 匿名函数
-const add = function (a, b)
+### 2-12. 什么是立即执行函数？
 
-// 函数参数
-function add(a, b) {
+```js
+// 立即执行函数：函数声明后直接调用
+(function (a, b) {
 	return a + b;
-}
-
-// 默认参数
-function add(a = 1, b = 2) {
-	return a + b;
-}
-
-// 剩余参数
-function add(a, ...args) {
-  console.log(args); //  2, 3, 4, 5
-}
-
-add(1, 2, 3, 4, 5);
-
-// 立即执行函数
-(function (x, y) {
-	return x + y;
 })(1, 2);
-
 ```
 
-## 6.面向对象
-
-### 6-1. 类声明
+### 2-13. 如何声明类？
 
 ```js
-// 空类
-class Person {}
-```
-
-### 6-2. 类的成员
-
-```js
-// 动态特征：属性和方法
+// class 关键字 > 类声明
 class Person {
-	name = "张三";
-	sayHello() {
-		console.log(`Hello, my name is ${this.name}`);
-	}
-}
-
-// 构造器 constructor
-class Person {
+	// 构造器 constructor 是一个特殊的方法，每次实例化对象的时候，都会自动调用这个方法
 	constructor(name) {
 		this.name = name;
 	}
@@ -236,30 +189,12 @@ class Person {
 		console.log(`Hello, my name is ${this.name}`);
 	}
 }
-new Person("张三");
+
+// new 关键字 > 实例化对象
+let p1 = new Person("张三");
 ```
 
-### 6-3. 静态特征 static
-
-```js
-// 静态属性
-class Person {
-	static age = 18;
-}
-
-console.log(Person.age); // 18
-
-// 静态方法
-class Person {
-	static sayHello() {
-		console.log("Hello");
-	}
-}
-
-Person.sayHello(); // Hello
-```
-
-### 6-4. 访问器 getter/setter
+### 2-14. Getter/Setter 访问器是怎么回事？
 
 ```js
 class Point {
@@ -276,7 +211,7 @@ class Point {
 }
 ```
 
-### 6-5. 继承 extends
+### 2-15. Extends 继承类该怎么写？
 
 ```js
 class Animal {
@@ -298,7 +233,7 @@ const dog = new Dog("Dog");
 dog.sayHello(); // Hello, my name is Dog
 ```
 
-## 7.模块
+### 2-16. 模块该如何导入 & 导出？
 
 ```js
 // export 导出
@@ -325,4 +260,4 @@ export * from "./math.js";
 
 // 导入所有
 import * as math from "./math.js";
-``` -->
+```

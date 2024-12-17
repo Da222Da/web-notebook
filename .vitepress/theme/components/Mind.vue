@@ -1,14 +1,17 @@
 <template>
-	<div id="map"></div>
+	<div id="map" :style="{ height: height + 'px' }"></div>
 </template>
 
 <script setup>
 import { onMounted, defineProps } from "vue";
 import MindMap from "simple-mind-map";
-// import MindMap from "./mindmap.js";
 
 const props = defineProps({
 	data: Object,
+	height: {
+		type: String,
+		default: 500,
+	},
 });
 
 onMounted(() => {
@@ -26,7 +29,6 @@ function init() {
 
 <style>
 #map {
-	height: 500px;
 	width: 100%;
 }
 </style>

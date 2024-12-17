@@ -41,7 +41,7 @@ function sidebar() {
 							],
 						},
 						{
-							text: "前端组件化",
+							text: "组件化方案",
 							link: "/componentization/index.md",
 							items: [
 								{
@@ -50,7 +50,7 @@ function sidebar() {
 								},
 							],
 						},
-						{ text: "前端工程化", link: "/engineering/index.md" },
+						{ text: "工程化方案", link: "/engineering/index.md" },
 						{
 							text: "运行时环境",
 							collapsed: false,
