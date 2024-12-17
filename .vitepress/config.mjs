@@ -14,7 +14,7 @@ export default defineConfig({
 			provider: "local",
 		},
 		outline: {
-			level: [2, 3],
+			level: "deep",
 		},
 	},
 });
