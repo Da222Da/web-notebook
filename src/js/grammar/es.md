@@ -19,7 +19,7 @@ const data = ref({
 				{ data: { text: "运算符：算术 & 比较 & 逻辑 & 赋值 & 字符串" } },
 				{ data: { text: "语句：If 条件判断 & Switch 分支 & For、While循环" } },
 				{ data: { text: "函数：声明函数 & 箭头函数 & 立即执行函数" } },
-				{ data: { text: "面向对象：声明类 & 构造器 & 实例化 & 访问器 & 继承" } },
+				{ data: { text: "面向对象：声明类 & 构造器 & 实例化 & 继承 & 访问器" } },
 				{ data: { text: "模块化：导入 & 导出" } },
 			],
 		})
@@ -27,7 +27,7 @@ const data = ref({
 
 ## 2.Prompt 提问记录
 
-### 2-1. 数据类型有哪些？
+### 2-1. 数据类型
 
 对于 JavaScript 的数据类型，我们只需要记住 5 个原始数据类型和 2 个引用数据类型，即可！
 
@@ -96,9 +96,39 @@ var outerFunc = fn();
 outerFunc(); // 输出 10
 ```
 
-### 2-3. 字符串运算符怎么写？
+### 2-3. 运算符
 
 ```js
+// 算术运算符
+const a = 1;
+const b = 2;
+const c = a + b; // 加法
+const d = a - b; // 减法
+const e = a * b; // 乘法
+const f = a / b; // 除法
+const g = a % b; // 取余
+
+// 比较运算符
+const h = a > b; // 大于
+const i = a < b; // 小于
+const j = a >= b; // 大于等于
+const k = a == b; // 等于
+const l = a === b; // 全等于
+const m = a != b; // 不等于
+const n = a !== b; // 不全等于
+
+// 逻辑运算符
+const o = a && b; // 与
+const p = a || b; // 或
+const q = !a; // 非
+
+// 赋值运算符
+let r = a; // 赋值
+r += b; // 加法赋值
+r -= b; // 减法赋值
+r *= b; // 乘法赋值
+r /= b; // 除法赋值
+
 // 字符串运算符
 const str1 = "Hello";
 const str2 = "World";
@@ -108,9 +138,8 @@ const str4 = `${str1} ${str2}`; // 模板字符串
 
 ### 2-4. 语句
 
-#### a. IF 条件语句怎么写？
-
 ```js
+// If 条件判断
 if (a > b) {
 	console.log("a大于b");
 } else if (a < b) {
@@ -118,11 +147,8 @@ if (a > b) {
 } else {
 	console.log("a等于b");
 }
-```
 
-#### b. Switch 分支语句怎么写？
-
-```js
+// Switch 分支语句
 switch (a) {
 	case 1:
 		console.log("a等于1");
@@ -133,17 +159,13 @@ switch (a) {
 	default:
 		console.log("a不等于1和2");
 }
-```
 
-#### c. For & While 循环语句怎么写？
-
-```js
-// for 循环
+// For 循环语句
 for (let i = 0; i < 10; i++) {
 	console.log(i);
 }
 
-// while 循环
+// While 循环语句
 let j = 0;
 while (j < 10) {
 	console.log(j);
@@ -152,8 +174,6 @@ while (j < 10) {
 ```
 
 ### 2-5. 函数
-
-#### a. 如何声明函数？
 
 ```js
 // 函数声明
@@ -164,18 +184,10 @@ function add(a, b = 2) {
 // 函数调用
 add(1);
 add(1, 2);
-```
 
-#### b. 什么是箭头函数？
-
-```js
 // 箭头函数：函数的简写方式
 const add = (a, b) => a + b;
-```
 
-#### c. 什么是立即执行函数？
-
-```js
 // 立即执行函数：函数声明后直接调用
 (function (a, b) {
 	return a + b;
@@ -184,64 +196,62 @@ const add = (a, b) => a + b;
 
 ### 2-6. 面向对象
 
-#### a. 如何声明类？
+#### a. 如何声明一个猫狗类？
 
 ```js
 // class 关键字 > 类声明
-class Person {
+class Animal {
 	// 构造器 constructor 是一个特殊的方法，每次实例化对象的时候，都会自动调用这个方法
 	constructor(name) {
 		this.name = name;
 	}
-	sayHello() {
-		console.log(`Hello, my name is ${this.name}`);
-	}
 }
 
-// new 关键字 > 实例化对象
-let p1 = new Person("张三");
-```
-
-#### b. Getter/Setter 访问器是怎么回事？
-
-```js
-class Point {
-	_x = 0;
-	get x() {
-		return this._x;
-	}
-	set x(value) {
-		if (value < 0) {
-			throw new Error("Invalid value");
-		}
-		this._x = value;
-	}
-}
-```
-
-#### c. Extends 继承类该怎么写？
-
-```js
-class Animal {
-	constructor(name) {
-		this.name = name;
-	}
-	sayHello() {
-		console.log(`Hello, my name is ${this.name}`);
-	}
-}
-
+// 狗类
+// extends 关键字 > 继承
 class Dog extends Animal {
 	constructor(name) {
 		super(name); // 相当于，调用 Animal 类的构造函数
 	}
+	say() {
+		console.log(`${this.name}：汪汪汪`);
+	}
 }
 
-const dog = new Dog("Dog");
-dog.sayHello(); // Hello, my name is Dog
+const dog = new Dog("旺财"); // new 关键字 > 实例化对象
+dog.sayHello(); // 输出：旺财：汪汪汪
+
+// 猫类
+class Cat extends Animal {
+	constructor(name) {
+		super(name); // 相当于，调用 Animal 类的构造函数
+	}
+	say() {
+		console.log(`${this.name}：喵喵喵`);
+	}
+}
+const cat = new Cat("咪咪");
+cat.say(); // 输出：咪咪：喵喵喵
 ```
 
-### 2-7. 模块该如何导入 & 导出？
+#### b. Getter/Setter 访问器
+
+```js
+// Getter/Setter 访问器
+class Dog {
+	name = "旺财";
+	// Getter 访问器: 获取 name 属性值时，自动调用该方法
+	get name() {
+		return this._name;
+	}
+	// Setter 访问器: 设置 name 属性值时，自动调用该方法
+	set name(value) {
+		this._name = value;
+	}
+}
+```
+
+### 2-7. 模块
 
 ```js
 // export 导出

@@ -50,6 +50,7 @@ function sidebar() {
 								},
 							],
 						},
+						{ text: "可视化方案" },
 						{ text: "工程化方案", link: "/engineering/index.md" },
 						{
 							text: "运行时环境",
