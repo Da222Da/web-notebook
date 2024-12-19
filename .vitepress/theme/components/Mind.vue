@@ -12,6 +12,10 @@ const props = defineProps({
 		type: String,
 		default: 500,
 	},
+	offsetLeft: {
+		type: Number,
+		default: 50,
+	},
 });
 
 onMounted(() => {
@@ -22,7 +26,7 @@ function init() {
 	new MindMap({
 		el: document.getElementById("map"),
 		data: props.data,
-		initRootNodePosition: [50, "center"],
+		initRootNodePosition: [Number(props.offsetLeft), "center"],
 	});
 }
 </script>

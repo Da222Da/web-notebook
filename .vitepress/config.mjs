@@ -46,12 +46,18 @@ function sidebar() {
 							items: [
 								{
 									text: "VueJS",
-									link: "/componentization/vue/index.md",
+									link: "/js/componentization/vue.md",
 								},
 							],
 						},
 						{ text: "可视化方案" },
-						{ text: "工程化方案", link: "/engineering/index.md" },
+						{
+							text: "工程化方案",
+							items: [
+								{ text: "Webpack", link: "/js/engineering/webpack.md" },
+								{ text: "Rollup", link: "/js/engineering/rollup.md" },
+							],
+						},
 						{
 							text: "运行时环境",
 							collapsed: false,
