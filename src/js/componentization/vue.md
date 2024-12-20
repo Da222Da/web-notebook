@@ -6,7 +6,7 @@ VueJS 是一个基于 JavaScript 的框架、用于构建**组件化**的用户�
 
 ## 1.Graph 知识图表
 
-<Mind :data="data" height="450" />
+<Mind :data="data" height="500" />
 <script setup>
 import { onMounted, ref } from "vue";
 const data = ref({
