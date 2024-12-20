@@ -1,11 +1,10 @@
 <template>
 	{{ $test() }}
-	<HelloWorld />
+	<hello-world />
 </template>
 
 <script setup>
 import { onMounted, getCurrentInstance, inject } from "vue";
-import HelloWorld from "./components/HelloWorld.vue";
 
 const msg = inject("msg");
 onMounted(() => {

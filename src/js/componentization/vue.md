@@ -15,6 +15,16 @@ const data = ref({
 			},
 			children: [
 				{ 
+					data: { text: "响应系统" }, 
+					children: [
+						{ data: { text: "ref" } }, 
+					] 
+				},
+				{ 
+					data: { text: "渲染系统" }, 
+					children: [] 
+				},
+				{ 
 					data: { text: "组件系统" }, 
 					children: [
 						{ data: { text: "props 父组件向子组件传递数据" } }, 
@@ -22,14 +32,14 @@ const data = ref({
 						{ data: { text: "provide/inject 跨组件传递数据" } }
 					] 
 				},
-				{ data: { text: "插件系统" }, children: [{ data: { text: "注册全局方法" } }, { data: { text: "注册全局组件" } }, { data: { text: "注册全局 provide 数据" } }] },
+				{ data: { text: "插件系统" }, children: [{ data: { text: "注册全局方法/属性" } }, { data: { text: "注册全局组件" } }, { data: { text: "注册全局 provide 数据" } }] },
 			],
 		})
 </script>
 
 ## 2.Prompt 提问记录
 
-### 2.1 组件系统
+### 2.3 组件系统
 
 #### a. props 数据传递
 
@@ -158,6 +168,131 @@ import { inject } from "vue";
 
 // 使用 inject 获取名为 'sharedData' 的数据
 const sharedData = inject("sharedData");
+</script>
+```
+
+:::
+
+### 2.4 插件系统
+
+#### a. 注册全局方法/属性
+
+::: code-group
+
+```js [1.定义插件 test.plugin.js]
+const plugins = {
+	install(app) {
+		// 注册全局方法 $test
+		app.config.globalProperties.$test = () => {
+			console.log("this is a test plugin");
+		};
+	},
+};
+
+export default plugins;
+```
+
+```js [2.注册插件 main.js]
+import { createApp } from "vue";
+import App from "./App.vue";
+import TestPlugin from "./plugins/test.plugin.js";
+
+const app = createApp(App);
+
+app.use(TestPlugin);
+
+app.mount("#app");
+```
+
+```vue [3.使用插件 App.vue]
+<template>
+	<!-- 在 template 模板中使用 -->
+	{{ $test() }}
+</template>
+
+<script setup>
+import { onMounted, getCurrentInstance } from "vue";
+
+onMounted(() => {
+	// 在 setup 脚本中使用
+	getCurrentInstance().appContext.config.globalProperties.$test();
+});
+</script>
+```
+
+:::
+
+#### b. 注册全局组件
+
+::: code-group
+
+```js [1.定义插件 test.plugin.js]
+import HelloWorld from "@/components/HelloWorld.vue";
+
+const plugins = {
+	install(app) {
+		// 注册全局方法 $test
+		app.component("hello-world", HelloWorld);
+	},
+};
+
+export default plugins;
+```
+
+```js [2.注册插件 main.js]
+import { createApp } from "vue";
+import App from "./App.vue";
+import TestPlugin from "./plugins/test.plugin.js";
+
+const app = createApp(App);
+
+app.use(TestPlugin);
+
+app.mount("#app");
+```
+
+```vue [3.使用插件 App.vue]
+<template>
+	<hello-world />
+</template>
+```
+
+:::
+
+#### c. 注册全局 provide 数据
+
+::: code-group
+
+```js [1.定义插件 test.plugin.js]
+const plugins = {
+	install(app) {
+		app.provide("msg", { msg: "from plugin" });
+	},
+};
+
+export default plugins;
+```
+
+```js [2.注册插件 main.js]
+import { createApp } from "vue";
+import App from "./App.vue";
+import TestPlugin from "./plugins/test.plugin.js";
+
+const app = createApp(App);
+
+app.use(TestPlugin);
+
+app.mount("#app");
+```
+
+```vue [3.使用插件 App.vue]
+<script setup>
+import { onMounted, inject } from "vue";
+
+const msg = inject("msg");
+onMounted(() => {
+	console.log(msg, "test");
+});
 </script>
 ```
 
