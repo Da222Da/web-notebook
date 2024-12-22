@@ -1,14 +1,24 @@
 <template>
-	{{ $test() }}
-	<hello-world />
+	<div id="app">
+		<h1>{{ message }}</h1>
+	</div>
 </template>
 
-<script setup>
-import { onMounted, getCurrentInstance, inject } from "vue";
-
-const msg = inject("msg");
-onMounted(() => {
-	getCurrentInstance().appContext.config.globalProperties.$test();
-	console.log(msg, "test");
-});
+<script>
+export default {
+	data() {
+		return {
+			message: "Hello Vue 3 with Rollup!",
+		};
+	},
+};
 </script>
+
+<style scoped>
+#app {
+	font-family: Avenir, Helvetica, Arial, sans-serif;
+	text-align: center;
+	color: #2c3e50;
+	margin-top: 60px;
+}
+</style>

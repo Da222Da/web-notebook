@@ -42,11 +42,10 @@ function sidebar() {
 						},
 						{
 							text: "组件化方案",
-							link: "/componentization/index.md",
 							items: [
 								{
 									text: "VueJS",
-									link: "/js/componentization/vue.md",
+									link: "/js/component/vue.md",
 								},
 							],
 						},
@@ -61,16 +60,16 @@ function sidebar() {
 						{
 							text: "运行时环境",
 							collapsed: false,
-							items: [
-								{
-									text: "浏览器",
-									link: "/runtime-env/browser/index.md",
-								},
-								{
-									text: "NodeJS",
-									link: "/runtime-env/node/index.md",
-								},
-							],
+							// items: [
+							// 	{
+							// 		text: "浏览器",
+							// 		link: "/runtime-env/browser/index.md",
+							// 	},
+							// 	{
+							// 		text: "NodeJS",
+							// 		link: "/runtime-env/node/index.md",
+							// 	},
+							// ],
 						},
 					],
 				},
@@ -78,6 +77,10 @@ function sidebar() {
 					text: "应用 & 实践",
 					collapsed: false,
 					items: [
+						{
+							text: "Vue 组件库设计与实现",
+							link: "/apps/vue3-component.md",
+						},
 						// {
 						// 	text: "CLI 脚手架开发",
 						// 	link: "/apps/cli.md",

@@ -25,3 +25,37 @@ const data = ref({
 			] 
 		})
 </script>
+
+## 2. Prompt 问答记录
+
+### 2-1. rollup 如何处理 .js 文件？
+
+::: code-group
+
+```js [1.配置文件 rollup.config.js]
+export default {
+	input: "./src/test.js",
+	output: {
+		file: "dist/bundle.js",
+		format: "es",
+	},
+};
+```
+
+```js [2.目标文件 test.js]
+console.log("Starting app");
+```
+
+```js [3.运行指令与依赖 package.json]
+{
+	"scripts": {
+		"build": "rollup -c rollup.config.js"
+	},
+	"devDependencies": {
+		"rollup": "^4.29.1"
+	},
+}
+
+```
+
+:::
