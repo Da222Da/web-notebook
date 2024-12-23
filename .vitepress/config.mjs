@@ -24,19 +24,19 @@ function sidebar() {
 		"/": {
 			items: [
 				{
-					text: "JavaScript 客户端",
+					text: "客户端",
 					collapsed: false,
 					items: [
 						{
-							text: "语法约定",
+							text: "JavaScript 语法约定",
 							items: [
 								{
 									text: "ES 语法约定",
-									link: "/js/grammar/es.md",
+									link: "/client/grammar/es.md",
 								},
 								{
 									text: "TS 语法约定",
-									link: "/js/grammar/ts.md",
+									link: "/client/grammar/ts.md",
 								},
 							],
 						},
@@ -45,7 +45,7 @@ function sidebar() {
 							items: [
 								{
 									text: "VueJS",
-									link: "/js/component/vue.md",
+									link: "/client/component/vue.md",
 								},
 							],
 						},
@@ -53,8 +53,8 @@ function sidebar() {
 						{
 							text: "工程化方案",
 							items: [
-								{ text: "Webpack", link: "/js/engineering/webpack.md" },
-								{ text: "Rollup", link: "/js/engineering/rollup.md" },
+								{ text: "Webpack", link: "/client/engineering/webpack.md" },
+								{ text: "Rollup", link: "/client/engineering/rollup.md" },
 							],
 						},
 						{
