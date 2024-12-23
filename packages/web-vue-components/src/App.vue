@@ -15,10 +15,10 @@ export default {
 </script>
 
 <style scoped>
-#app {
+h1 {
 	font-family: Avenir, Helvetica, Arial, sans-serif;
 	text-align: center;
-	color: #2c3e50;
+	color: red;
 	margin-top: 60px;
 }
 </style>
