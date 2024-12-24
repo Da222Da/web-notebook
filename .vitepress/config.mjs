@@ -24,7 +24,7 @@ function sidebar() {
 		"/": {
 			items: [
 				{
-					text: "客户端",
+					text: "客户端 Client",
 					collapsed: false,
 					items: [
 						{
@@ -57,19 +57,20 @@ function sidebar() {
 								{ text: "Rollup", link: "/client/engineering/rollup.md" },
 							],
 						},
+					],
+				},
+				{
+					text: "服务端 Server",
+					collapsed: false,
+					items: [
 						{
-							text: "运行时环境",
-							collapsed: false,
-							// items: [
-							// 	{
-							// 		text: "浏览器",
-							// 		link: "/runtime-env/browser/index.md",
-							// 	},
-							// 	{
-							// 		text: "NodeJS",
-							// 		link: "/runtime-env/node/index.md",
-							// 	},
-							// ],
+							text: "服务器",
+							items: [
+								{
+									text: "Koa 服务器框架",
+									link: "/server/nodejs/koa.md",
+								},
+							],
 						},
 					],
 				},

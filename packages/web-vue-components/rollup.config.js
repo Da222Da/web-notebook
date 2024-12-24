@@ -2,9 +2,12 @@
 import { defineConfig } from "rollup";
 import vue from "rollup-plugin-vue"; // 处理 Vue
 import css from "rollup-plugin-css-only"; // 处理 CSS
+import typescript from "rollup-plugin-typescript2"; // 处理 TypeScript
+
+const override = { compilerOptions: { declaration: true } };
 
 export default defineConfig({
-	input: "src/main.js", // 入口文件
+	input: "src/main.ts", // 入口文件
 	output: {
 		format: "iife", // 输出格式
 		name: "MyVueApp", // 全局变量名
@@ -14,5 +17,5 @@ export default defineConfig({
 		},
 	},
 	external: ["vue"], // 指定外部依赖项，告诉 rollup不要将外部依赖项打包进输出文件
-	plugins: [vue(), css({ output: "bundle.css" })],
+	plugins: [typescript({ tsconfigOverride: override }), vue(), css({ output: "bundle.css" })],
 });

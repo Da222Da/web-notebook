@@ -1,0 +1,17 @@
+{
+	"compilerOptions": {
+		"target": "es5", // 指定 ECMAScript 目标版本
+		"module": "ESNext", // 指定使用哪种模块解析策略
+		"strict": true, // 启用所有严格类型检查选项
+		"jsx": "preserve", // 指定 JSX 代码的生成: 'preserve'，这意味着编译器不会将 JSX 转换为普通的 JavaScript 代码，而是将 JSX 代码作为原始文本输出到编译后的文件中。
+		"esModuleInterop": true, // 启用 emit 兼容性，以支持通过 import 导入 CommonJS 模块
+		"skipLibCheck": true, // 跳过声明文件的类型检查
+		"moduleResolution": "node", // 意味着 TypeScript 编译器将使用 Node.js 的模块解析策略来查找模块
+		"baseUrl": "./", // 指定项目根目录，和 paths 配置项配合使用，设置模块别名
+		"paths": {
+			"@app/*": ["src/*"] // 设置模块别名，方便引用
+		}
+	},
+	"include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "typing.d.ts"],
+	"exclude": ["node_modules"]
+}
