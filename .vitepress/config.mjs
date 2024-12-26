@@ -49,12 +49,21 @@ function sidebar() {
 								},
 							],
 						},
-						{ text: "可视化方案" },
+						{ text: "可视化方案", items: [{ text: "D3", link: "/client/visual/d3.md" }] },
 						{
 							text: "工程化方案",
+							collapsed: true,
 							items: [
 								{ text: "Webpack", link: "/client/engineering/webpack.md" },
 								{ text: "Rollup", link: "/client/engineering/rollup.md" },
+							],
+						},
+						{
+							text: "微前端方案",
+							collapsed: true,
+							items: [
+								{ text: "无界", link: "/client/micro/wujie.md" },
+								{ text: "乾坤", link: "/client/micro/qiankun.md" },
 							],
 						},
 					],
@@ -79,7 +88,7 @@ function sidebar() {
 					collapsed: false,
 					items: [
 						{
-							text: "Vue 组件库设计与实现",
+							text: "Vue3 组件库设计与实现",
 							link: "/apps/vue3-component.md",
 						},
 						// {
