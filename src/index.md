@@ -4,4 +4,4 @@
 
 <wvc-test msg="1234"></wvc-test>
 
-<wvc-button type="primary">123</wvc-button>
+<wvc-button type="primary">123</wvc-button> 123

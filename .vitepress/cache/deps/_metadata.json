@@ -2,48 +2,54 @@
   "hash": "bdfad14a",
   "configHash": "7f1c5156",
   "lockfileHash": "f0359bf5",
-  "browserHash": "a70f706c",
+  "browserHash": "b79c96a8",
   "optimized": {
     "vue": {
       "src": "../../../node_modules/.pnpm/vue@3.5.13_typescript@5.7.2/node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "1699da09",
+      "fileHash": "d2fa4ce1",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../node_modules/.pnpm/@vue+devtools-api@7.6.8/node_modules/@vue/devtools-api/dist/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "46557564",
+      "fileHash": "53e3ebbb",
       "needsInterop": false
     },
     "vitepress > @vueuse/core": {
       "src": "../../../node_modules/.pnpm/@vueuse+core@11.3.0_vue@3.5.13/node_modules/@vueuse/core/index.mjs",
       "file": "vitepress___@vueuse_core.js",
-      "fileHash": "f3474dc9",
+      "fileHash": "fb8b15c6",
       "needsInterop": false
     },
     "vitepress > @vueuse/integrations/useFocusTrap": {
       "src": "../../../node_modules/.pnpm/@vueuse+integrations@11.3.0_focus-trap@7.6.2_vue@3.5.13/node_modules/@vueuse/integrations/useFocusTrap.mjs",
       "file": "vitepress___@vueuse_integrations_useFocusTrap.js",
-      "fileHash": "56dd58bf",
+      "fileHash": "aa8dbd1d",
       "needsInterop": false
     },
     "vitepress > mark.js/src/vanilla.js": {
       "src": "../../../node_modules/.pnpm/mark.js@8.11.1/node_modules/mark.js/src/vanilla.js",
       "file": "vitepress___mark__js_src_vanilla__js.js",
-      "fileHash": "5dfe6ecd",
+      "fileHash": "9cfde6a2",
       "needsInterop": false
     },
     "vitepress > minisearch": {
       "src": "../../../node_modules/.pnpm/minisearch@7.1.1/node_modules/minisearch/dist/es/index.js",
       "file": "vitepress___minisearch.js",
-      "fileHash": "23a3670b",
+      "fileHash": "bd99dccb",
       "needsInterop": false
     },
     "element-plus": {
       "src": "../../../node_modules/.pnpm/element-plus@2.9.2_vue@3.5.13/node_modules/element-plus/es/index.mjs",
       "file": "element-plus.js",
-      "fileHash": "dfa2eb60",
+      "fileHash": "2c5ea360",
+      "needsInterop": false
+    },
+    "simple-mind-map": {
+      "src": "../../../node_modules/.pnpm/simple-mind-map@0.12.2/node_modules/simple-mind-map/index.js",
+      "file": "simple-mind-map.js",
+      "fileHash": "de82f021",
       "needsInterop": false
     }
   },
