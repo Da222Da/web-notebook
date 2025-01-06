@@ -14,7 +14,7 @@ const data = ref({
 				text: "ES 语法",
 			},
 			children: [
-				{ data: { text: "数据类型：原始数据 & 引用数据" } },
+				{ data: { text: "数据类型：原始数据 & 引用数据", hyperlink: "https://vitepress.dev/" } },
 				{ data: { text: "变量：声明变量 & var 变量提升 & 变量作用域 & 闭包" } },
 				{ data: { text: "运算符：算术 & 比较 & 逻辑 & 赋值 & 字符串" } },
 				{ data: { text: "语句：If 条件判断 & Switch 分支 & For、While循环" } },
