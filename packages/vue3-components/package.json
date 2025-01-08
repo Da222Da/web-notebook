@@ -1,0 +1,38 @@
+{
+	"name": "zhangxianjue-vue3-components",
+	"version": "0.0.3",
+	"description": "",
+	"main": "./dist/index.es.js",
+	"module": "./dist/index.es.js",
+	"type": "module",
+	"scripts": {
+		"build": "rollup -c",
+		"deploy": "npm run build && npm version patch && npm publish"
+	},
+	"files": [
+		"dist",
+		"package.json",
+		"README.md"
+	],
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@rollup/plugin-commonjs": "^28.0.2",
+		"@rollup/plugin-json": "^6.1.0",
+		"@rollup/plugin-node-resolve": "^16.0.0",
+		"@types/webpack-env": "^1.18.5",
+		"rollup": "^4.29.1",
+		"rollup-plugin-css-only": "^4.5.2",
+		"rollup-plugin-postcss": "^4.0.2",
+		"rollup-plugin-typescript2": "^0.36.0",
+		"rollup-plugin-vue": "^6.0.0",
+		"tslib": "^2.8.1",
+		"typescript": "^5.7.2"
+	},
+	"dependencies": {
+		"element-plus": "^2.9.2",
+		"simple-mind-map": "^0.13.0",
+		"vue": "^3.5.13"
+	}
+}

@@ -1,6 +1,10 @@
 <template>
-	<wvc-test msg="1234"></wvc-test>
-	<wvc-button type="primary">123</wvc-button>
+	<wvc-breadcrumb :data="BreadcrumbData" :isDivider="false" separator="/" defaultPath="unreal"></wvc-breadcrumb>
 </template>
 
-<script setup></script>
+<script setup>
+const BreadcrumbData = [
+	{ path: "graph", text: "Unreal 知识体系" },
+	{ path: "graph anim", text: "动画" },
+];
+</script>
