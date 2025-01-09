@@ -8,6 +8,7 @@ const components = [ElBreadcrumb, ElMindmap];
 // 全局组件一次性引用
 const install = (app) => {
 	components.forEach((component) => {
+		console.log("component::: ", component);
 		app.component(component.name, component);
 	});
 };

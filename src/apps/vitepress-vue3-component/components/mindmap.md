@@ -11,9 +11,9 @@
 
 ## Attribute 属性说明
 
-| 属性名      | 类型    | 默认值 | 说明                 |
-| ----------- | ------- | ------ | -------------------- |
-| data        | Array   | []     | 面包屑列表           |
-| defaultPath | String  | ""     | 默认路径             |
-| separator   | String  | "/"    | 路径间隔符号         |
-| isDivider   | Boolean | true   | 底部是否会出现分割线 |
+| 属性名     | 类型   | 默认值 | 说明                                   |
+| ---------- | ------ | ------ | -------------------------------------- |
+| data       | Object | []     | 思维导图数据                           |
+| height     | String | "500"  | 容器高度                               |
+| offsetLeft | Number | 50     | 根节点偏移距离                         |
+| router     | Object | {}     | 是否使用 Vue Router 对象，来切换超链接 |

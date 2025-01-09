@@ -24,7 +24,7 @@ export default defineConfig({
 		},
 		{
 			format: "umd", // 输出格式
-			name: "Vue3Components", // 全局变量名
+			name: "VitepressVue3Components", // 全局变量名
 			file: "dist/index.umd.js", // 输出文件
 			globals: {
 				vue: "Vue", // 指定全局变量 Vue，相当于 var vue = window.Vue;
