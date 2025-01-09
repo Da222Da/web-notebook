@@ -1,11 +1,11 @@
-# vue3-component
+# vitepress-vue3-components
 
 > 这是一个为 Vitepress 在线文档开发的 Vue3 的组件库。
 
 ## 安装依赖
 
 ```bash
-npm install vue3-component # 安装依赖
+npm install vitepress-vue3-components # 安装依赖
 ```
 
 ## 引入组件库
@@ -47,5 +47,5 @@ const BreadcrumbData2 = [
 
 <iframe
   style="width: 100%; height: 455px; border: 1px solid #e2e2e2;"
-  src="https://da222da.github.io/playground/#eNq1Us1O20AQfpXtnuNEhZ5cE6kUDu2hrdreuj1s7Ymzqb1r7Y7TqFFuPEClVj0gcYAD4sIRhECIlwmK8hbM2kSxICAuXCzv930z883PmL8pivawBB7y6EUQsOnl1ezf0exiZ3pxen3+d3p2PNvdqZ8sCLpCRwh5kUkE+hcYbVqQSWzL/AcLE4lyQ/AltEXAS8FZqNyWGqoELNFoSxC8G3WWuiemWrubqicztyJX1Gl61JGLrSqQOcCyIETlhbHIxqxRcMJ61uRM8N99qdORknpQQkBzWQ9iQ3oNGp3gQsdGO2xEVi2yDfbNtzBmhcR+SGn6JidjLYYwQv+eH/6f75+Q/0nrvpAeKdCclvLr4z8kn+8d3EZ8f7268trzVfZ7ezik+tI+VgT6LS08R5169l3e4uiog55K2wNnNJ3bWGhGcX68KgP7sUBFHQoesorxnMwy8+t9hfmroaQ1Hvch/rkCH7iRxwT/ZMGBHfpBLDiUNgWs6e0vH8h1g8xNUmakfoT8DM5kpfdYyzZLnZDthq5y+646LqXTr257hKDdoqnq7EnpR+PVdFtvH2l9aXe9/aqKE3rCJzdZilUJ">
+  src="https://da222da.github.io/playground/#eNq1UrFuE0EQ/ZVha58tEqrjYokQF1AAAjqW4nI3tjfs7a5254wly10+AAlEgUQBBaJJCUJEiJ9xZPkvmL3D2AQT0dCcbue9mXlvZmbilnPdSY0iFdm1JIHFt+/LVx+X56eL888XX18uvpwt35y2T0iSvjQZYeV0Tsj/kjLUybHHvCx8XR1DWuaUH0hx+Ct0xIHrUkCqwpGaqBI9w+RrlKKf9X7L/veCe5cLDnMddlfMett6TRYKrxxBQKodR1TlrCeYwUBvWsAcht5WIMVEETqPISQ8ov2ksEw3aChIIU1hTSC4ZBUO4En0MQOX0zjlGmNbsbQOEE4pvlcfXq/efWIH886fRH6MkOe1oV+cvWD66u37nxlPb+7uvPf/Osf9/T2l+fJGdiTGPa01Z7129H3RERTYwVCNuifBGr68mTTAeXG8SqO/70ixQylSaJCI5Vrb53ebWLweLtrGizEWz3bET8I0xqR4wOtDP4mDWGOU+xFSCw8e3WPVW2Bly1oz+wrwIQar66ixpR3WpmTZW7xG7Z3mtpQZPQ6DKaEJa1PN+TMzjiay+bZuX2F9I3e/e6PJk2Yu5j8AlKxZCw==">
 </iframe>

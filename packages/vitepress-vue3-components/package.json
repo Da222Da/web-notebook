@@ -1,6 +1,6 @@
 {
-	"name": "zhangxianjue-vue3-components",
-	"version": "0.0.3",
+	"name": "vitepress-vue3-components",
+	"version": "0.0.8",
 	"description": "",
 	"main": "./dist/index.es.js",
 	"module": "./dist/index.es.js",

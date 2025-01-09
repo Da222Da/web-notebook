@@ -1,9 +1,9 @@
 import "element-plus/dist/index.css"; // 引入 element-plus 样式
 
-import Breadcrumb from "./components/Breadcrumb/index.js";
-import MindMap from "./components/MindMap/index.js";
+import ElBreadcrumb from "./components/Breadcrumb/index.js";
+import ElMindmap from "./components/MindMap/index.js";
 
-const components = [Breadcrumb, MindMap];
+const components = [ElBreadcrumb, ElMindmap];
 
 // 全局组件一次性引用
 const install = (app) => {
@@ -12,6 +12,6 @@ const install = (app) => {
 	});
 };
 
-export { install, Breadcrumb, MindMap };
+export { install, ElBreadcrumb, ElMindmap };
 
 export default install;

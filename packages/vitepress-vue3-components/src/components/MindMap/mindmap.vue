@@ -4,7 +4,7 @@
 
 <script>
 export default {
-	name: "Wvc	Mindmap",
+	name: "ElMindmap",
 };
 </script>
 

@@ -5,8 +5,8 @@ import DefaultTheme from "vitepress/theme";
 // import "element-plus/dist/index.css";
 // import PageHeader from "./components/PageHeader.vue";
 
-// import Vue3Components from "zhangxianjue-vue3-components";
-import "zhangxianjue-vue3-components/dist/style.css";
+// import Vue3Components from "vitepress-vue3-components";
+import "vitepress-vue3-components/dist/style.css";
 
 export default {
 	...DefaultTheme,
@@ -20,7 +20,7 @@ export default {
 		// app.component("Mind", Mind);
 
 		const Vue3Components = defineClientComponent(() => {
-			return import("zhangxianjue-vue3-components");
+			return import("vitepress-vue3-components");
 		});
 
 		app.use(Vue3Components);

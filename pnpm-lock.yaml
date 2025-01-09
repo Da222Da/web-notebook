@@ -17,12 +17,12 @@ importers:
       simple-mind-map:
         specifier: ^0.12.1
         version: 0.12.2
+      vitepress-vue3-components:
+        specifier: workspace:^
+        version: link:packages/vitepress-vue3-components
       vue:
         specifier: ^3.5.13
         version: 3.5.13(typescript@5.7.2)
-      zhangxianjue-vue3-components:
-        specifier: workspace:^
-        version: link:packages/vue3-components
     devDependencies:
       '@vue/repl':
         specifier: ^4.4.3
@@ -42,12 +42,12 @@ importers:
 
   packages/example:
     dependencies:
+      vitepress-vue3-components:
+        specifier: workspace:^
+        version: link:../vitepress-vue3-components
       vue:
         specifier: ^3.5.13
         version: 3.5.13(typescript@5.7.2)
-      zhangxianjue-vue3-components:
-        specifier: workspace:^
-        version: link:../vue3-components
     devDependencies:
       '@vitejs/plugin-vue':
         specifier: ^5.2.1
@@ -56,7 +56,7 @@ importers:
         specifier: ^6.0.5
         version: 6.0.7
 
-  packages/vue3-components:
+  packages/vitepress-vue3-components:
     dependencies:
       element-plus:
         specifier: ^2.9.2
