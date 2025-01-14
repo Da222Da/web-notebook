@@ -15,7 +15,7 @@ export default {
 
 <script setup>
 import { ElBreadcrumb, ElBreadcrumbItem, ElDivider } from "element-plus";
-import { defineProps, computed } from "vue";
+import { defineProps } from "vue";
 const props = defineProps({
 	data: Array,
 	defaultPath: {
@@ -28,16 +28,13 @@ const props = defineProps({
 	},
 	isDivider: {
 		type: Boolean,
-		default: true,
+		default: false,
 	},
 });
 
-// 计算属性
-const defaultPath = computed(() => props.defaultPath);
-
 // 路径生成
 function generatePath(text) {
-	let path = defaultPath;
+	let path = props.defaultPath;
 	const words = text.split(" ");
 
 	for (let i = 0; i < words.length; i++) {

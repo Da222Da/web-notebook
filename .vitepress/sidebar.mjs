@@ -3,6 +3,43 @@ export default function sidebar() {
 		ignoreDeadLinks: true,
 		"/": {
 			items: [
+				{
+					text: "理论知识",
+					collapsed: false,
+					items: [
+						{
+							text: "JavaScript 语法约定",
+							items: [
+								{
+									text: "ES 语法约定",
+									link: "/js/grammar/es/",
+								},
+							],
+						},
+						{
+							text: "JavaScript 组件化",
+							items: [
+								{
+									text: "VueJS 组件化框架",
+									link: "/js/component/vue/",
+									items: [
+										{ text: "VueRouter 路由管理", link: "/js/component/vue/router" },
+										{ text: "pinia 状态管理", link: "/js/component/vue/pinia" },
+									],
+								},
+							],
+						},
+						{
+							text: "JavaScript 工程化",
+							items: [
+								{
+									text: "Vite 构建工具",
+									link: "/js/engineering/vite/",
+								},
+							],
+						},
+					],
+				},
 				// {
 				// 	text: "基础知识",
 				// 	collapsed: false,
