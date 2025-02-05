@@ -1,4 +1,4 @@
-# Vite 构建工具
+# Javascript 工程化
 
 Vite 是一个基于原生 ES 模块导入现代前端构建工具，构建速度会比 webpack 快一些。
 
@@ -19,19 +19,19 @@ const data = ref({
 	},
 	children: [
 		{ 
-			data: { text: "Config 配置" },
+			data: { text: "基础使用" },
 			children: [
-				{ data: { text: "别名 alias", hyperlink: `${CurrentPath}#别名-alias` } },
+				{ data: { text: "如何给项目文件夹配置别名?", hyperlink: `${CurrentPath}#如何给项目文件夹配置别名?` } },
 			]
 		},
-		{ data: { text: "Plugin 插件", } },
+		{ data: { text: "构建开发环境", } },
 	],
 })
 </script>
 
 ## Details 图表详情
 
-### 别名 alias
+### 如何给项目文件夹配置别名?
 
 在使用 Vite 构建项目时，配置文件夹别名可以简化模块导入路径，提高代码的可读性和可维护性。
 

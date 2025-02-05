@@ -2,10 +2,10 @@ export default function nav() {
 	return [
 		{ text: "首页", link: "/" },
 		// { text: "JavaScript 编程语言", link: "/js/grammar/es/" },
-		{
-			text: "自研产品",
-			items: [{ text: "Vitepress 组件库", link: "/apps/vitepress-vue3-component/" }],
-		},
+		// {
+		// 	text: "自研产品",
+		// 	items: [{ text: "Vitepress 组件库", link: "/apps/vitepress-vue3-component/" }],
+		// },
 		{
 			text: "文档支持",
 			items: [

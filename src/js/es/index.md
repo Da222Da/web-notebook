@@ -1,4 +1,4 @@
-# ES 语法约定
+# ECMAScript 语法约定
 
 ECMAScript 语法约定, 是 JavaScript 官方`W3C 国际组织`定义的语法。
 
@@ -6,7 +6,7 @@ ECMAScript 语法约定, 是 JavaScript 官方`W3C 国际组织`定义的语法�
 
 ## Graph 可视化图表
 
-<ElMindmap :data="data" height="850" :router="router" />
+<ElMindmap :data="data" height="750" :router="router" />
 
 <script setup>
 import { onMounted, ref, computed } from "vue";
@@ -18,36 +18,29 @@ const data = ref({
 		text: "ES 语法",
 	},
 	children: [
-		{ data: { text: "数据类型", note: "原始数据类型(字符串、数字、布尔值、undefined、null) & 引用数据类型(数组、对象)" } },
 		{ 
-			data: { text: "变量", note: "声明变量 & 解构赋值 & 变量提升 & 变量作用域 & 闭包" },
+			data: { text: "数据类型 & 变量" },
 			children: [
 				{ data: { text: "解构赋值", hyperlink: `${CurrentPath}#解构赋值`} },
 				{ data: { text: "var 变量提升", hyperlink: `${CurrentPath}#var-变量提升`} },
 				{ data: { text: "变量作用域", hyperlink: `${CurrentPath}#变量作用域`} },
 				{ data: { text: "闭包", hyperlink: `${CurrentPath}#闭包`} },
-			]
-		},
-		{ 
-			data: { text: "运算符", note: "算术 & 比较 & 逻辑 & 赋值 & 字符串" },
-			children: [
 				{ data: { text: "模板运算符", hyperlink: `${CurrentPath}#字符串运算符` } },
 			]
 		},
 		{ 
-			data: { text: "语句", note: "If 条件判断 & For 循环& Switch 分支 & While循环" },
+			data: { text: "流程控制" },
 			children: [
-				{ data: { text: "If 条件判断", hyperlink: `${CurrentPath}#if-条件判断` } },
-				{ data: { text: "For 循环", hyperlink: `${CurrentPath}#for-循环` } }
+				{ data: { text: "分支语句", hyperlink: `${CurrentPath}#分支语句` } },
+				{ data: { text: "循环语句", hyperlink: `${CurrentPath}#循环语句` } },
 			]		
 		},
 		{ 
-			data: { text: "函数", note: "声明函数 & 立即执行函数 & 箭头函数 & 函数参数 & 函数返回值 & 函数作用域 & 函数递归 & 函数柯里化" },
+			data: { text: "函数", note: "声明函数 & 调用函数 & 参数 & 返回值 & 箭头函数 & 默认参数 & 函数表达式 & 函数递归 & 作用域 & 作用域链 & 立即执行函数" },
 			children: [
 				{ data: { text: "剩余参数", hyperlink: `${CurrentPath}#剩余参数` } },
 				{ data: { text: "立即执行函数", hyperlink: `${CurrentPath}#立即执行函数` } },
 				{ data: { text: "函数递归", hyperlink: `${CurrentPath}#函数递归` } },
-				{ data: { text: "函数柯里化", hyperlink: `${CurrentPath}#函数柯里化` } },
 			]
 		},
 		{ 
@@ -57,7 +50,15 @@ const data = ref({
 				{ data: { text: "访问器", hyperlink: `${CurrentPath}#访问器` } },
 			]
 		},
-		{ data: { text: "模块化：导入 & 导出", hyperlink: `${CurrentPath}#模块化` } },
+		{ 
+			data: { text: "模块", note: "模块导入(导出) & Promise 对象 & async/await & Reflect 对象 & Set 对象 & Map 对象 & Weakset 对象 & Weakmap 对象 & Symbol 对象" },
+			children: [
+				{ data: { text: "模块导入(导出)", hyperlink: `${CurrentPath}#模块导入-导出` } },
+				{ data: { text: "Promise 对象", hyperlink: `${CurrentPath}#promise-对象` } },
+				{ data: { text: "async/await", hyperlink: `${CurrentPath}#async-await-语法糖` } },
+				{ data: { text: "Proxy 对象", hyperlink: `${CurrentPath}#proxy-对象` } },
+			]
+		},
 	],
 })
 </script>
@@ -130,7 +131,7 @@ const str3 = str1 + " " + str2; // 字符串拼接
 const str4 = `${str1} ${str2}`; // 模板字符串
 ```
 
-### If 条件判断
+### 分支语句
 
 ```js
 // If 条件判断
@@ -143,13 +144,39 @@ if (a > b) {
 }
 ```
 
-### For 循环
+```js
+// Switch 分支语句
+switch (fruit) {
+	case "apple":
+		console.log("苹果");
+		break;
+	case "banana":
+		console.log("香蕉");
+		break;
+	case "orange":
+		console.log("橙子");
+		break;
+	default:
+		console.log("未知水果");
+}
+```
+
+### 循环语句
 
 ```js
 // For 循环语句
 for (let i = 0; i < 10; i++) {
 	console.log(i);
 }
+```
+
+```js
+// While 循环语句
+let i = 0;
+while (i < 10) {
+	console.log(i);
+	i++;
+}	
 ```
 
 ### 剩余参数
@@ -192,48 +219,6 @@ console.log(factorial(1)); // 输出: 1
 console.log(factorial(10)); // 输出: 3628800
 ```
 
-### 函数柯力化
-
-函数柯力化（Currying）是一种将接受多个参数的函数转换成接受一个单一参数（最初函数的第一个参数）的函数，并且返回接受余下的参数且返回结果的新函数的技术。这个过程可以链式调用，直到所有的参数都被提供，最后返回函数的结果。
-
-简单来说，柯力化就是把一个多参数函数转换成一系列单参数函数的过程。
-
-一般用于`延迟计算`和`参数复用`的场景。
-
-```js
-function curriedAdd(a) {
-	return function (b) {
-		return a + b;
-	};
-}
-
-// 使用柯力化后的函数
-const addFive = curriedAdd(5);
-console.log(addFive(3)); // 输出: 8
-```
-
-::: danger Title: 通用柯力化函数
-
-```js
-function curry(fn) {
-	return function curried(...args) {
-		if (args.length >= fn.length) {
-			return fn.apply(this, args);
-		} else {
-			return function (...moreArgs) {
-				return curried.apply(this, args.concat(moreArgs));
-			};
-		}
-	};
-}
-
-// 使用通用的柯力化函数
-const curriedAdd = curry(add);
-console.log(curriedAdd(5)(3)); // 输出: 8
-console.log(curriedAdd(1)(2)(3)); // 输出: 6
-```
-
-:::
 
 ### 继承
 
@@ -290,7 +275,7 @@ class Dog {
 }
 ```
 
-### 模块化
+### 模块导入(导出)
 
 ```js
 // export 导出
@@ -318,3 +303,77 @@ export * from "./math.js";
 // 导入所有
 import * as math from "./math.js";
 ```
+
+### Promise 对象
+
+Promise 是 JavaScript 中用于处理异步操作的一种对象。它代表了一个异步操作的最终完成状态。
+
+Promise 对象有三种状态：pending（等待中）、fulfilled（已成功）和 rejected（已失败）。
+- 默认是 pending（等待中）状态。
+- 当异步操作成功完成时，Promise 对象的状态会从 pending 变为 fulfilled，并将结果值传递给后续的 .then() 方法。
+- 当异步操作失败时，Promise 对象的状态会从 pending 变为 rejected，并将错误原因传递给后续的 .catch() 方法。
+
+```js
+const promise = new Promise((resolve, reject) => {
+	setTimeout(() => {
+		resolve("成功");
+	}, 1000);
+});
+
+promise
+	.then((result) => {
+		console.log(result); // 输出：成功
+	})
+	.catch((error) => {
+		console.error(error);
+	});
+```
+
+### async/await 语法糖
+
+async/await 是 JavaScript 中用于处理异步操作的一种语法糖，它建立在 Promise 的基础上，提供了一种更加简洁和易读的方式来编写异步代码。
+
+- 使用 async 关键字声明的函数称为 async 函数，async 函数会隐式地返回一个 Promise 对象。
+- 使用 await 关键字可以暂停 async 函数的执行，等待 Promise 的解决（fulfilled）或拒绝（rejected），并返回结果。
+
+```js
+async function asyncFunction() {
+	try {
+		const result = await promise;
+		console.log(result); // 输出：成功
+	} catch (error) {
+		console.error(error);
+	}
+}
+
+asyncFunction();
+```
+
+### Proxy 对象
+Proxy 对象用于创建一个对象的代理，可以拦截和自定义对象的基本操作，如属性访问、赋值、枚举、函数调用等。
+
+```js
+const handler = {
+	get: function (target, prop, receiver) {
+		console.log(`获取属性：${prop}`);
+		return Reflect.get(target, prop, receiver);
+	},
+	set: function (target, prop, value, receiver) {
+		console.log(`设置属性：${prop} = ${value}`);
+		return Reflect.set(target, prop, value, receiver);
+	},
+};
+
+const target = {
+	name: "张三", age: 18,
+};
+
+const proxy = new Proxy(target, handler);
+
+console.log(proxy.name); // 输出：获取属性：name
+console.log(proxy.age); // 输出：获取属性：age
+
+proxy.name = "李四"; // 输出：设置属性：name = 李四
+proxy.age = 20; // 输出：设置属性：age = 20
+```
+
